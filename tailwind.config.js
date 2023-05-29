@@ -30,15 +30,31 @@ module.exports = {
           'darkest': '#590D22'
         },
       },
+      borderRadius: {
+        '50': '50px'
+      },
       spacing: {
+        '16': '16px',
         '40': '40px',
-        '48': '48px'
+        '48': '48px',
+        '64': '64px',
+        '80': '80px'
       },
       fontSize: {
         'h1': '8rem',
         'h2': '3rem',
         'h3': '2.5rem',
         'p16': '1rem',
+      },
+      gap: {
+        '25': '25px',
+        '50': '50px',
+      },
+      margin: {
+        '75': '75px'
+      },
+      boxShadow:{
+        'inner': 'inset 0px 0px 15px 8px rgb(164 19 60 / 0.25) '
       }
     },
   },

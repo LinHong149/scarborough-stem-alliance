@@ -1,5 +1,9 @@
 import Image from 'next/image'
 
+import Stat from '../components/Stat'
+import Workshop from '../components/Workshop'
+
+
 const style = {
   container: 'flex items-center justify-center h-screen bg-gray-200',
   button: 'border-2',
@@ -9,41 +13,21 @@ const style = {
 
 export default function Home() {
   return (
-    <main>
-      <div className={`Hero`}>
+    <main className='Body mx-75'>
+      <div className={`Hero h-[80vh] flex items-end pb-36`}>
         <h1 className={`Hero-title h1`}>Hello! <br/> We are SSA</h1>
         {/* <Image>Image</Image> */}
       </div>
 
-      <div className={`Stats`}>
-        <div className={`Stat-container`}>
-          <h3 className={`Stat-number h3`}>50+</h3>
-          <p className={`Stat-topic`}>Youths Inspired</p>
-        </div>
-        <div className={`Stat-container`}>
-          <h3 className={`Stat-number h3`}>50+</h3>
-          <p className={`Stat-topic`}>Youths Inspired</p>
-        </div>
-        <div className={`Stat-container`}>
-          <h3 className={`Stat-number h3`}>50+</h3>
-          <p className={`Stat-topic`}>Youths Inspired</p>
-        </div>
+      <div className={`Stats w-100 flex space-between gap-25 h-[20vh] mb-[20vh]`}>
+        <Stat Number="50+" Topic='Youths Inspired' />
+        <Stat Number="50+" Topic='Youths Inspired' />
+        <Stat Number="50+" Topic='Youths Inspired' />
       </div>
 
-      <div className={`Workshop`}>
+      <div className={`Workshop h-[100vh] flex flex-col justify-center gap-50`}>
         <h1 className={`Workshop-title h1`}>Workshops for You</h1>
-        <div className={`Workshop-section`}>
-          <div className={`Workshop-nav`}>
-            <div className={`Workshop-topic`}>
-              <h3 className={`Workshop-name h3`}>Feeder School</h3>
-            </div>
-            <div className={`Workshop-topic`}>
-              <h3 className={`Workshop-name h3`}>Feeder School</h3>
-            </div>
-          </div>
-          <Image className={`Workshop-image`}></Image>
-          <Image className={`Workshop-image`}></Image>
-        </div>
+        <Workshop/>
       </div>
 
       <div className={`Events`}>

@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import SSA from '../assets/SSa.png'
+import SSA from '../assets/SSA.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBook } from '@fortawesome/free-solid-svg-icons'
 import { faSchool } from '@fortawesome/free-solid-svg-icons'

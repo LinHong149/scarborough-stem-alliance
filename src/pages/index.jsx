@@ -2,18 +2,16 @@ import Image from 'next/image'
 
 import Stat from '../components/Stat'
 import Workshop from '../components/Workshop'
-
+import Event from '../components/Event';
 
 const style = {
   container: 'flex items-center justify-center h-screen bg-gray-200',
   button: 'border-2',
 };
 
-
-
 export default function Home() {
   return (
-    <main className='Body mx-75'>
+    <main className='Body mx-75 overflow-visible w-[calc(100vw-150px)]'>
       <div className={`Hero h-[80vh] flex items-end pb-36`}>
         <h1 className={`Hero-title h1`}>Hello! <br/> We are SSA</h1>
         {/* <Image>Image</Image> */}
@@ -30,26 +28,9 @@ export default function Home() {
         <Workshop/>
       </div>
 
-      <div className={`Events`}>
-        <h2 className={`Events-title h2`}>Check out our events!</h2>
-        <div className={`Events-container`}>
-          <div className={`Events-box`}>
-            <h3 className={`Event-name h3`}>Event Name</h3>
-            <p className={`Event-date`}>May 11, 2023</p>
-          </div>
-          <div className={`Events-box`}>
-            <h3 className={`Event-name h3`}>Event Name</h3>
-            <p className={`Event-date`}>May 11, 2023</p>
-          </div>
-          <div className={`Events-box`}>
-            <h3 className={`Event-name h3`}>Event Name</h3>
-            <p className={`Event-date`}>May 11, 2023</p>
-          </div>
-          <div className={`Events-box`}>
-            <h3 className={`Event-name h3`}>Event Name</h3>
-            <p className={`Event-date`}>May 11, 2023</p>
-          </div>
-        </div>
+      <div className={`Events bg-gradient-to-r from-black to-grey w-[100vw] px-[75px] flex flex-col gap-50 py-52 rounded-t-50 -translate-x-[75px] z-0`}>
+        <h2 className={`Events-title h2 text-white`}>Check out our events!</h2>
+        <Event/>
       </div>
 
       <div className={`Sponsors`}>

@@ -55,6 +55,9 @@ module.exports = {
       },
       boxShadow:{
         'inner': 'inset 0px 0px 15px 8px rgb(164 19 60 / 0.25) '
+      },
+      aspectRatio: {
+        'event': '6/5'
       }
     },
   },

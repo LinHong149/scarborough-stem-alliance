@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import { FAQContent } from '../constants'
 
-const FAQItem = ({ isActive, onClick }) => {
+const FAQItem = ({ faqItem, onClick }) => {
+  const { question, answer, isActive } = faqItem
   return (
     <div 
     className={`FAQ-container border-black border-[3px] rounded-50 w-[calc(50%-12.5px)] h-fit shrink p-9`}
@@ -16,28 +18,23 @@ const FAQItem = ({ isActive, onClick }) => {
 }
 
 const FAQ = () => {
-  const [faqItem, setFaqItem] = useState([
-    {id: 1, isActive: true},
-    {id: 2, isActive: false},
-    {id: 3, isActive: false},
-  ])
+  const [faqItems, setFaqItems] = useState(FAQContent);
 
   const handleItemClick = (itemId) => {
-    setFaqItem((prevItems) =>
+    setFaqItems((prevItems) =>
       prevItems.map((item) =>
-        item.id === itemId ? {...item, isActive: !item.isActive} : item
-        // item.id === itemId ? {...item, isActive: !item.isActive} : {...item, isActive: false}
+        item.id === itemId ? { ...item, isActive: !item.isActive } : item
       )
-    )
-  }
+    );
+  };
 
   return (
     <div className='FAQ flex flex-wrap gap-25'>
-      {faqItem.map((item) => (
+      {faqItems.map((faqItem) => (
         <FAQItem 
-          key={item.id}
-          isActive={item.isActive} 
-          onClick={() => handleItemClick(item.id)}
+          key={faqItem.id}
+          faqItem={faqItem}
+          onClick={() => handleItemClick(faqItem.id)}
         />
       ))}
     </div>

@@ -35,8 +35,8 @@ module.exports = {
       },
       spacing: {
         '16': '16px',
-        '40': '40px',
-        '48': '48px',
+        // '40': '40px',
+        // '48': '48px',
         '64': '64px',
         '80': '80px'
       },
@@ -45,6 +45,7 @@ module.exports = {
         'h2': '3rem',
         'h3': '2.5rem',
         'p16': '1rem',
+        'button': '1.5rem',
       },
       gap: {
         '25': '25px',

@@ -11,13 +11,14 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    background-color: #F6F6F6;
 }
 
 .h1 {
     font-style: normal;
     font-weight: 700;
     font-size: 8rem;
-    line-height: 1;
+    line-height: 9rem;
     display: flex;
     align-items: center;
     -webkit-text-stroke: 5px #1F1F1F;
@@ -40,4 +41,9 @@
     line-height: 1;
     display: flex;
     align-items: center;
+}
+
+.button {
+    font-size: 1.5rem;
+    filter: drop-shadow(0px 5px 0px  #B8B8B8);
 }

@@ -3,6 +3,8 @@ import Image from 'next/image'
 import Stat from '../components/Stat'
 import Workshop from '../components/Workshop'
 import Event from '../components/Event';
+import Sponsor from '../components/Sponsor';
+import FAQ from '../components/FAQ'
 
 const style = {
   container: 'flex items-center justify-center h-screen bg-gray-200',
@@ -33,34 +35,18 @@ export default function Home() {
         <Event/>
       </div>
 
-      <div className={`Sponsors`}>
-        <h1 className={`Sponsors-title h1`}>Inspiring Youth with Sponsors</h1>
-        <div className={`Sponsors-container`}>
-          <div className={`Sponsors-sponsor`}>
-            <Image className={`Sponsors-image`}></Image>
-          </div>
-          <div className={`Sponsors-sponsor`}>
-            <Image className={`Sponsors-image`}></Image>
-          </div>
-          <div className={`Sponsors-sponsor`}>
-            <Image className={`Sponsors-image`}></Image>
-          </div>
-        </div>
-        <button className={`Sponsors-button`}>
+      <div className={`Sponsors flex flex-col gap-50 py-72`}>
+        <h1 className={`Sponsors-title h1`}>Inspiring youth with sponsors</h1>
+        <Sponsor></Sponsor>
+        <button className={`Sponsors-button button border-black border-[3px] px-32 py-9 rounded-full shadow-xs bg-white w-fit`}>
           <p className={`Sponsor-CTA`}>Sponsor Now</p>
         </button>
       </div>
 
-      <div className={`FAQ`}>
+      <div className={`FAQ flex flex-col gap-50`}>
         <h2 className="FAQ-title h2">Frequently Asked Questions</h2>
         {/* Component */}
-        <div className={`FAQ-container`}>
-          <div className={`FAQ-top`}>
-            <p className={`FAQ-question`}>Lorem ipsum dolor sit amet consectetur.</p>
-            {/* Icon */}
-          </div>
-          <p className={`FAQ-answer`}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis unde maxime perferendis optio, consectetur esse eius voluptatum eligendi quas laudantium.</p>
-        </div>
+        <FAQ/>
       </div>
 
       <div className={`Mailing`}>

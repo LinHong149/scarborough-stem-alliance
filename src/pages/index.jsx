@@ -5,6 +5,7 @@ import Workshop from '../components/Workshop'
 import Event from '../components/Event';
 import Sponsor from '../components/Sponsor';
 import FAQ from '../components/FAQ'
+import Footer from '../components/Footer'
 
 const style = {
   container: 'flex items-center justify-center h-screen bg-gray-200',
@@ -49,17 +50,17 @@ export default function Home() {
         <FAQ/>
       </div>
 
-      <div className={`Mailing`}>
+      {/* <div className={`Mailing`}>
         <h3 className={`Mailing-title h3`}>Join our mailing list!</h3>
         <p className={`Mailing-text`}>Be the first to know about our workshops and events!</p>
         <input className={`Mailing-input`} type='text' placeholder='Email' />
         <button className={`Mailing-button`}>
           <p className={`Mailing-CTA`}>Submit</p>
         </button>
-      </div>
+      </div> */}
 
-      <div className={`Footer`}>
-        
+      <div className={`Footer bg-black w-screen h-screen -translate-x-[75px] bg-gray-900 text-white py-8`}>
+        <Footer/>
       </div>
 
     </main>

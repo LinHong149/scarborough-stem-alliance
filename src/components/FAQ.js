@@ -9,10 +9,10 @@ const FAQItem = ({ faqItem, onClick }) => {
     onClick={onClick}
     >
         <div className={`FAQ-top text-[24px]`}>
-            <p className={`FAQ-question`}>Lorem ipsum dolor sit amet consectetur.</p>
+            <p className={`FAQ-question`}>{question}</p>
         {/* Icon */}
         </div>
-        <p className={`FAQ-answer pt-2 duration-200 ${isActive ? 'block' : 'hidden'} `}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis unde maxime perferendis optio, consectetur esse eius voluptatum eligendi quas laudantium.</p>
+        <p className={`FAQ-answer pt-2 duration-200 ${isActive ? 'block' : 'hidden'} `}>{answer}</p>
     </div>
   )
 }

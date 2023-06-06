@@ -20,7 +20,7 @@ export const footer = [
 export const FAQContent = [
     {
         id: 1,
-        question: "What is Scarborough STEM Alliance (SSA)?",
+        question: "What is Scarborough STEM Alliance?",
         answer:
             "Scarborough STEM Alliance (SSA) is a non-profit organization dedicated to bringing STEM (Science, Technology, Engineering, and Mathematics) education to youths. We organize workshops and showcases to promote STEM learning and inspire the next generation of innovators.",
         isActive: true

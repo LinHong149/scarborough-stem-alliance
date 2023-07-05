@@ -4,7 +4,7 @@ const EventItem = () => {
   return (
     <div className={`Events-box border-pink-light bg-gradient-to-r from-blue-dark to-blue-normal grow min-w-[500px] rounded-50 p-10 aspect-event flex flex-col justify-end`}>
         <h3 className={`Event-name h3 text-white`}>Event Name</h3>
-        <p className={`Event-date text-white`}>May 11, 2023</p>
+        <p  className={`Event-date text-white`}>May 11, 2023</p>
     </div>
   )
 }

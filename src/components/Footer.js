@@ -9,7 +9,7 @@ const MailingList = () => {
             <input
             type="email"
             placeholder="Your Email"
-            className="bg-gray-800 rounded py-2 px-3 mb-2"
+            className="bg-gray-800 rounded py-2 px-3 mb-2 text-black"
             />
             <button
             type="submit"
@@ -25,7 +25,7 @@ const MailingList = () => {
 const Footer = () => {
   return (
     <div>
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap p-[75px]">
           {footer.map((section, index) => (
             <div key={index} className="w-full md:w-1/2 lg:w-1/4 mb-8">
               <h2 className="text-xl font-bold mb-4">{section.title}</h2>

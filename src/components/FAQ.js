@@ -5,14 +5,14 @@ const FAQItem = ({ faqItem, onClick }) => {
   const { question, answer, isActive } = faqItem
   return (
     <div 
-    className={`FAQ-container border-black border-[3px] rounded-50 w-[calc(50%-12.5px)] h-fit shrink p-9`}
+    className={`FAQ-container border-white border-[3px] rounded-50 w-[calc(50%-12.5px)] h-fit shrink p-9`}
     onClick={onClick}
     >
         <div className={`FAQ-top text-[24px]`}>
-            <p className={`FAQ-question`}>{question}</p>
+            <p className={`FAQ-question text-white`}>{question}</p>
         {/* Icon */}
         </div>
-        <p className={`FAQ-answer pt-2 duration-200 ${isActive ? 'block' : 'hidden'} `}>{answer}</p>
+        <p className={`FAQ-answer pt-2 duration-200 text-white ${isActive ? 'block' : 'hidden'} `}>{answer}</p>
     </div>
   )
 }

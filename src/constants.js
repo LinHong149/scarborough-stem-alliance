@@ -1,3 +1,9 @@
+import eventBackground1 from './assets/eventBackground1.png';
+import eventBackground2 from './assets/eventBackground2.png';
+import eventBackground3 from './assets/eventBackground3.png';
+import eventBackground4 from './assets/eventBackground4.png';
+import eventBackground5 from './assets/eventBackground5.png';
+
 export const footer = [
     {
         title: "About Us",
@@ -14,6 +20,21 @@ export const footer = [
     {
         title: "Follow Us",
         links: ["Facebook", "Twitter", "Instagram"],
+    },
+]
+
+export const stats = [
+    {
+        number: 20,
+        description: 'youth inspired'
+    },
+    {
+        number: 50,
+        description: 'youth inspired'
+    },
+    {
+        number: 65,
+        description: 'youth inspired'
     },
 ]
 
@@ -52,5 +73,33 @@ export const FAQContent = [
         answer:
             "We strive to make our workshops accessible to all students. While some workshops may have a nominal fee to cover material costs, we also offer scholarships and financial assistance to ensure that no student is excluded from participating due to financial constraints.",
         isActive: false
+    },
+]
+
+export const eventInfo = [
+    {
+        image: eventBackground1,
+        title: "Event Title1",
+        date: 'March 1st, 2023'
+    },
+    {
+        image: eventBackground2,
+        title: "Event Title",
+        date: 'March 1st, 2023'
+    },
+    {
+        image: eventBackground3,
+        title: "Event Title",
+        date: 'March 1st, 2023'
+    },
+    {
+        image: eventBackground4,
+        title: "Event Title",
+        date: 'March 1st, 2023'
+    },
+    {
+        image: eventBackground5,
+        title: "Event Title",
+        date: 'March 1st, 2023'
     },
 ]

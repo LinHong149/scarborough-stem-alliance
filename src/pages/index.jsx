@@ -3,7 +3,7 @@ import { useInView } from 'react-intersection-observer';
 
 import Image from 'next/image'
 
-import Stat from '../components/Stat'
+import Stats from '../components/Stats'
 import Workshop from '../components/Workshop'
 import Event from '../components/Event';
 import Sponsor from '../components/Sponsor';
@@ -46,20 +46,16 @@ export default function Home() {
   })
 
   return (
-    <main className={`Body px-20 w-screen overflow-hidden transition-bg duration-1000 ${isVisible ? 'bg-black opacity-100' : 'bg-white opacity-100'}`}>
+    <main className={`Body px-20 w-screen overflow-hidden transition-bg duration-500 ${isVisible ? 'bg-black opacity-100' : 'bg-white opacity-100'}`}>
       <div className={`Hero h-[80vh] flex items-end pb-36`}>
         <h1 className={`Hero-title h1`}>Hello! <br/> We are SSA</h1>
         {/* <Image>Image</Image> */}
       </div>
 
-      <div className={`Stats w-100 flex space-between gap-25 h-[20vh] mb-[20vh]`}>
-        <Stat Number="50+" Topic='Youths Inspired' />
-        <Stat Number="50+" Topic='Youths Inspired' />
-        <Stat Number="50+" Topic='Youths Inspired' />
-      </div>
+      <Stats/>
 
       <div className={`Workshop h-[100vh] flex flex-col justify-center gap-50`}>
-        <h1 className={`Workshop-title h1 ${theme} transition-bg duration-1000`}>Workshops for You</h1>
+        <h1 className={`Workshop-title h1 ${theme} transition-bg duration-500`}>Workshops for You</h1>
         <Workshop inView={inView} />
       </div>
 

@@ -7,25 +7,25 @@ import { faBook } from '@fortawesome/free-solid-svg-icons';
 import { faSchool } from '@fortawesome/free-solid-svg-icons';
 
 const WorkshopItem = ({ isActive, isSchool, inView, onClick }) => {
-  const active = 'bg-gradient-to-r from-blue-dark to-pink-normal text-white';
-  const notActive = 'bg-none text-black';
+  const active = 'bg-gradient-to-r from-blue-dark to-blue-normal';
+  const notActive = 'bg-none text-black border-2 border-blue-dark';
 
   return (
     <div
-      className={`Workshop-topic cursor-pointer rounded-50 p-64 w-full flex gap-25 items-center ${
+      className={`Workshop-topic box-border cursor-pointer rounded-50 p-64 w-full flex gap-25 items-center ${
         isActive ? active : notActive
       }`}
       onClick={onClick}
     >
       <FontAwesomeIcon
-        className={`Workshop-icon h3 ${
-          isActive ? 'text-white' : inView ? 'text-white' : 'text-black'
+        className={`Workshop-icon h3  ${
+          isActive ? 'text-black' : inView ? 'text-white' : 'text-black'
         }`}
         icon={isSchool ? faSchool : faBook}
       />
       <h3
         className={`Workshop-name h3 ${
-          isActive ? 'text-white' : inView ? 'text-white' : 'text-black'
+          isActive ? 'text-black' : inView ? 'text-white' : 'text-black'
         }`}
       >
         {isSchool ? 'Feeder School' : 'TPL'}
@@ -43,8 +43,8 @@ const Workshop = ({ inView }) => {
 
   return (
     <div className={`Workshop-section flex gap-25 h-min border-grey items-center`}>
-      <div className={`Workshop-nav w-1/2 flex flex-col gap-16 h-fit`}>
-        <WorkshopItem
+      <div className={`Workshop-nav z-10 w-1/2 flex flex-col gap-16 h-fit`}>
+        <WorkshopItem className=' cursor-pointer'
           isActive={activity}
           isSchool={true}
           inView={inView}
@@ -57,7 +57,7 @@ const Workshop = ({ inView }) => {
           onClick={() => handleItemClick(false)}
         />
       </div>
-      <div className='relative w-1/2 h-[60vh]'>
+      <div className='relative z-10 w-1/2 h-[60vh]'>
         <Image
             src={eventBackground1}
             className={`Workshop-image absolute w-full h-full object-cover rounded-50 object-contain border-2 transition-all duration-500

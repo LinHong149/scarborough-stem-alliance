@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { stats } from '../constants';
 
 const Stats = () => {
-  const gradient = 'bg-gradient-to-r from-blue-dark to-pink-normal';
+  const gradient = 'bg-gradient-to-r from-blue-dark to-blue-normal';
   const [counters, setCounters] = useState([]);
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const Stats = () => {
       {counters.map((info) => (
         <div
           key={info.description}
-          className={`Stat-container w-fit rounded-50 flex flex-col justify-center items-center py-10 h-min grow ${gradient} shadow-inner `}
+          className={`Stat-container z-10 w-fit rounded-50 flex flex-col justify-center items-center py-10 h-min grow ${gradient} `}
         >
           <h3 className={`Stat-number h3 text-white w-fit`}>
             {info.currentNumber}

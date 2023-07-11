@@ -48,21 +48,20 @@ export default function Home() {
   })
 
   return (
-    <main className={`Body relative px-20 w-screen overflow-hidden transition-bg duration-500 ${isVisible ? 'bg-blue-background opacity-100' : 'bg-white opacity-100'}`}>
+    <main className={`Body px-20 w-screen overflow-hidden transition-bg duration-500 ${isVisible ? 'bg-blue-background opacity-100' : 'bg-white opacity-100'}`}>
 
       <div className={`Hero h-[80vh] flex items-end pb-36`}>
-        <h1 className={`Hero-title h1`}>Hello! <br/> We are SSA</h1>
-        {/* <Image>Image</Image> */}
+        <h1 className={`Hero-title h0 z-10`}>Hello! <br/> We are SSA</h1>
       </div>
 
       <Stats/>
 
-      <div className={`Workshop h-[100vh] flex flex-col justify-center gap-50`}>
-        <h1 className={`Workshop-title h1 ${theme} transition-bg duration-500`}>Workshops for You</h1>
+      <div className={`Workshop z-10 h-[100vh] flex flex-col justify-center gap-50`}>
+        <h1 className={`Workshop-title z-10 h1 ${theme} transition-bg duration-500`}>Workshops for You</h1>
         <Workshop inView={inView} />
       </div>
 
-      <Image className='absolute t-0'
+      <Image className='absolute top-0 w-screen left-0 -z-1 h-[150vh] object-cover object-bottom'
       src={CloudBackground}/>
 
 
@@ -70,22 +69,22 @@ export default function Home() {
       ref={viewRef}
       // className={isVisible? "Events bg-gradient-to-r from-black to-grey w-[100vw] px-[75px] flex flex-col gap-50 py-52 rounded-t-50 -translate-x-[75px] z-0!" : ""}
       >
-        <div 
+        <div
         className="Events flex flex-col gap-50">
-          <h2 className={`Events-title h2 text-white`}>Check out our events!</h2>
+          <h2 className={`Events-title h1 ${theme} text-white`}>Our events</h2>
           <Event/>
         </div>
 
         <div className={`Sponsors flex flex-col gap-50 py-72`}>
           <h1 className={`Sponsors-title h1 text-white text-stroke-white`}>Inspiring youth with sponsors</h1>
           <Sponsor></Sponsor>
-          <button className={`Sponsors-button button px-32 py-9 rounded-full shadow-xs bg-white w-fit`}>
-            <p className={`Sponsor-CTA`}>Sponsor Now</p>
+          <button className={`Sponsors-button bg-gradient-to-r from-blue-dark to-blue-normal button px-32 py-9 rounded-full shadow-xs bg-white w-fit`}>
+            <p className={`Sponsor-CTA TEXT-WHITE `}>Sponsor Now</p>
           </button>
         </div>
 
         <div className={`FAQ flex flex-col gap-50`}>
-          <h2 className="FAQ-title h2 text-white">Frequently Asked Questions</h2>
+          <h2 className={`FAQ-title h1 ${theme} text-white`}>Frequently Asked Questions</h2>
           {/* Component */}
           <FAQ/>
         </div>

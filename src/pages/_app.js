@@ -5,7 +5,7 @@ import '../index.css'
 
 export default function App({ Component, pageProps }) {
   return (
-    <div className="bg-white flex justify-center">
+    <div className="bg-white flex justify-center z-100">
       <Navbar/>
       <Component {...pageProps} />
     </div>

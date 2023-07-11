@@ -16,7 +16,7 @@ module.exports = {
         'black': '#1F1F1F',
         'grey': '#656565',
         'gray': '#656565',
-        'white': '#E1E1E1',
+        'white': '#f5f9ff',
         'blue': {
           'light': '#90E0EF',
           'normal': '#00B4D8',
@@ -56,7 +56,7 @@ module.exports = {
         '75': '75px'
       },
       boxShadow:{
-        'inner': 'inset 0px 0px 15px 8px rgb(164 19 60 / 0.25) '
+        'inner': 'inset 0px 0px 15px 8px rgb(0 119 182 / 0.25) '
       },
       aspectRatio: {
         'event': '6/5'

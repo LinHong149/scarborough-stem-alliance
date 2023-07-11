@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { stats } from '../constants';
 
 const Stats = () => {
-  const gradient = 'bg-gradient-to-r from-pink-dark to-pink-normal';
+  const gradient = 'bg-gradient-to-r from-blue-dark to-pink-normal';
   const [counters, setCounters] = useState([]);
 
   useEffect(() => {

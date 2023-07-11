@@ -103,3 +103,9 @@ export const eventInfo = [
         date: 'March 1st, 2023'
     },
 ]
+
+export const sponsorsList = [
+    {
+        
+    }
+]

@@ -16,12 +16,13 @@ module.exports = {
         'black': '#1F1F1F',
         'grey': '#656565',
         'gray': '#656565',
-        'white': '#F6F6F6',
+        'white': '#E1E1E1',
         'blue': {
           'light': '#90E0EF',
           'normal': '#00B4D8',
           'dark': '#0077B6',
-          'darkest': '#153967'
+          'darkest': '#153967',
+          'background': '#0B111C'
         },
         'pink': {
           'light': '#FFCCD5',

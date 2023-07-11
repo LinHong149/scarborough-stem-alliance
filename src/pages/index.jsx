@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
+import CloudBackground from '../assets/CloudBackground.png'
+
 import Image from 'next/image'
 
 import Stats from '../components/Stats'
@@ -46,7 +48,8 @@ export default function Home() {
   })
 
   return (
-    <main className={`Body px-20 w-screen overflow-hidden transition-bg duration-500 ${isVisible ? 'bg-black opacity-100' : 'bg-white opacity-100'}`}>
+    <main className={`Body relative px-20 w-screen overflow-hidden transition-bg duration-500 ${isVisible ? 'bg-blue-background opacity-100' : 'bg-white opacity-100'}`}>
+
       <div className={`Hero h-[80vh] flex items-end pb-36`}>
         <h1 className={`Hero-title h1`}>Hello! <br/> We are SSA</h1>
         {/* <Image>Image</Image> */}
@@ -58,6 +61,9 @@ export default function Home() {
         <h1 className={`Workshop-title h1 ${theme} transition-bg duration-500`}>Workshops for You</h1>
         <Workshop inView={inView} />
       </div>
+
+      <Image className='absolute t-0'
+      src={CloudBackground}/>
 
 
       <div
@@ -73,7 +79,7 @@ export default function Home() {
         <div className={`Sponsors flex flex-col gap-50 py-72`}>
           <h1 className={`Sponsors-title h1 text-white text-stroke-white`}>Inspiring youth with sponsors</h1>
           <Sponsor></Sponsor>
-          <button className={`Sponsors-button button border-black border-[3px] px-32 py-9 rounded-full shadow-xs bg-white w-fit`}>
+          <button className={`Sponsors-button button px-32 py-9 rounded-full shadow-xs bg-white w-fit`}>
             <p className={`Sponsor-CTA`}>Sponsor Now</p>
           </button>
         </div>
@@ -93,7 +99,7 @@ export default function Home() {
           </button>
         </div> */}
 
-        <div className={`Footer bg-black w-screen h-screen -translate-x-[75px] bg-gray-900 text-white py-8 rounded-t-50`}>
+        <div className={`Footer bg-blue-background w-screen h-screen -translate-x-[75px] bg-gray-900 text-white py-8 rounded-t-50`}>
           <Footer/>
         </div>
       </div>

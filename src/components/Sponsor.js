@@ -12,7 +12,7 @@ const SponsorItem = ({SponsorImage}) => {
 
 const Sponsor = () => {
   return (
-    <div className={`Sponsors-container flex flex-wrap gap-25`}>
+    <div className={`Sponsors-container w-full flex flex-wrap gap-25`}>
         <SponsorItem SponsorImage={SSA}/>
         <SponsorItem SponsorImage={SSA}/>
         <SponsorItem SponsorImage={SSA}/>

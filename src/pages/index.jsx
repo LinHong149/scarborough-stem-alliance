@@ -75,16 +75,16 @@ export default function Home() {
           <Event/>
         </div>
 
-        <div className={`Sponsors flex flex-col gap-50 py-72`}>
+        <div className={`Sponsors flex flex-col items-center w-full gap-50 py-72`}>
           <h1 className={`Sponsors-title h1 text-white text-stroke-white`}>Inspiring youth with sponsors</h1>
           <Sponsor></Sponsor>
           <button className={`Sponsors-button bg-gradient-to-r from-blue-dark to-blue-normal button px-32 py-9 rounded-full shadow-xs bg-white w-fit`}>
-            <p className={`Sponsor-CTA TEXT-WHITE `}>Sponsor Now</p>
+            <p className={`Sponsor-CTA `}>Sponsor Now</p>
           </button>
         </div>
 
         <div className={`FAQ flex flex-col gap-50`}>
-          <h2 className={`FAQ-title h1 ${theme} text-white`}>Frequently Asked Questions</h2>
+          <h2 className={`FAQ-title h1 ${theme} text-white`}>Frequently asked questions</h2>
           {/* Component */}
           <FAQ/>
         </div>

@@ -56,7 +56,7 @@ export default function Home() {
 
       <Stats/>
 
-      <div className={`Workshop z-10 h-[100vh] flex flex-col justify-center gap-50`}>
+      <div className={`Workshop pb-36 z-10 h-[100vh] flex flex-col justify-center gap-50`}>
         <h1 className={`Workshop-title z-10 h1 ${theme} transition-bg duration-500`}>Workshops for You</h1>
         <Workshop inView={inView} />
       </div>
@@ -71,7 +71,7 @@ export default function Home() {
       >
         <div
         className="Events flex flex-col gap-50">
-          <h2 className={`Events-title h1 ${theme} text-white`}>Our events</h2>
+          <h2 className={`Events-title h1 ${theme} text-white w-full`}>Our events</h2>
           <Event/>
         </div>
 

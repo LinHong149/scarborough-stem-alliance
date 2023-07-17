@@ -8,7 +8,7 @@ const FAQItem = ({ faqItem, onClick }) => {
     className={`FAQ-container border-white border-[3px] rounded-50 w-[calc(50%-12.5px)] h-fit shrink p-9`}
     onClick={onClick}
     >
-        <div className={`FAQ-top text-[24px]`}>
+        <div className={`FAQ-top text-[20px]`}>
             <p className={`FAQ-question text-white`}>{question}</p>
         {/* Icon */}
         </div>

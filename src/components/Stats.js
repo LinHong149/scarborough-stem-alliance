@@ -28,11 +28,11 @@ const Stats = () => {
   }, []);
 
   return (
-    <div className={`Stats w-100 flex space-between gap-25 h-[20vh] mb-[20vh]`}>
+    <div className={`Stats w-100 flex flex-wrap space-between gap-25 h-fit mb-[20vh]`}>
       {counters.map((info) => (
         <div
           key={info.description}
-          className={`Stat-container z-10 w-fit rounded-50 flex flex-col justify-center items-center py-10 h-min grow ${gradient} `}
+          className={`Stat-container min-w-[200px] z-10 w-fit rounded-50 flex flex-col justify-center items-center py-10 h-min grow ${gradient} `}
         >
           <h3 className={`Stat-number h3 text-white w-fit`}>
             {info.currentNumber}

@@ -32,7 +32,7 @@ const Navbar = () => {
     }
   }, []);
 
-  // if (windowWidth <= 800) {
+  if (windowWidth <= 800) {
     return (
       <div className={`navbar flex flex-col gap-2 w-full px-16 mt-4 fixed`}>
         <nav className={`flex justify-between items-center px-8 rounded-full bg-transparent backdrop-blur-md transition-300`}>
@@ -45,14 +45,14 @@ const Navbar = () => {
           xmlns="http://www.w3.org/2000/svg" height="1.8em" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
         </nav>
         {mobileNav ? 
-        <div className='popup-nav flex flex-col justify-around w-full h-fit gap-8 py-8 items-center rounded-[40px] bg-transparent backdrop-blur-md transition-300 transition-opacity' >
+        <div className='popup-nav flex flex-col justify-around w-full h-fit gap-8 py-8 items-center rounded-[40px] bg-transparent backdrop-blur-md transition-300 transition-all' >
           <Link className={`${NavItemStyle} ${NavItemTextStyleMobile}`} href="/">Home</Link>
           <Link className={`${NavItemStyle} ${NavItemTextStyleMobile}`} href="/works">Our Works</Link>
           <Link className={`${NavItemStyle} ${NavItemTextStyleMobile}`} href="/partners">Partners</Link>
           <Link className={`${NavItemStyle} ${NavItemTextStyleMobile}`} href="/team">Team</Link>
           <Link className={`${NavItemStyle} ${NavItemTextStyleMobile}`} href="/contact">Contact</Link>
         </div>:
-        <div className='popup-nav flex flex-col justify-around w-full h-fit gap-8 py-8 items-center rounded-[40px] bg-transparent backdrop-blur-md transition-300 opacity-0 transition-opacity' >
+        <div className='popup-nav flex flex-col justify-around w-full h-fit gap-8 py-8 items-center rounded-[40px] bg-transparent backdrop-blur-md transition-300 transition-all hidden' >
           <Link className={`${NavItemStyle} ${NavItemTextStyleMobile}`} href="/">Home</Link>
           <Link className={`${NavItemStyle} ${NavItemTextStyleMobile}`} href="/works">Our Works</Link>
           <Link className={`${NavItemStyle} ${NavItemTextStyleMobile}`} href="/partners">Partners</Link>
@@ -63,24 +63,24 @@ const Navbar = () => {
         
       </div>
     );
-  // }
+  }
 
-  // return (
-  //   <div className={`navbar w-full px-16 mt-4 fixed`}>
-  //     <nav className={`flex justify-between items-center px-8 rounded-full bg-transparent backdrop-blur-md transition-300`}>
-  //       <Link className={`${NavItemStyle} ${NavItemImageStyle} `} href="/" alt="ssalogo">
-  //         <Image className={`${NavItemImageStyle}`} src={SSA} />
-  //       </Link>
-  //       <div className='flex flex-row w-fit h-fit gap-10 items-center hover:align-end ' >
-  //         <Link className={`${NavItemStyle} ${NavItemTextStyle}`} href="/">Home</Link>
-  //         <Link className={`${NavItemStyle} ${NavItemTextStyle}`} href="/works">Our Works</Link>
-  //         <Link className={`${NavItemStyle} ${NavItemTextStyle}`} href="/partners">Partners</Link>
-  //         <Link className={`${NavItemStyle} ${NavItemTextStyle}`} href="/team">Team</Link>
-  //         <Link className={`${NavItemStyle} ${NavItemTextStyle}`} href="/contact">Contact</Link>
-  //       </div>
-  //     </nav>
-  //   </div>
-  // );
+  return (
+    <div className={`navbar w-full px-16 mt-4 fixed`}>
+      <nav className={`flex justify-between items-center px-8 rounded-full bg-transparent backdrop-blur-md transition-300`}>
+        <Link className={`${NavItemStyle} ${NavItemImageStyle} `} href="/" alt="ssalogo">
+          <Image className={`${NavItemImageStyle}`} src={SSA} />
+        </Link>
+        <div className='flex flex-row w-fit h-fit gap-10 items-center hover:align-end ' >
+          <Link className={`${NavItemStyle} ${NavItemTextStyle}`} href="/">Home</Link>
+          <Link className={`${NavItemStyle} ${NavItemTextStyle}`} href="/works">Our Works</Link>
+          <Link className={`${NavItemStyle} ${NavItemTextStyle}`} href="/partners">Partners</Link>
+          <Link className={`${NavItemStyle} ${NavItemTextStyle}`} href="/team">Team</Link>
+          <Link className={`${NavItemStyle} ${NavItemTextStyle}`} href="/contact">Contact</Link>
+        </div>
+      </nav>
+    </div>
+  );
 };
 
 export default Navbar;

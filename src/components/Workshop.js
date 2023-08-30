@@ -97,7 +97,7 @@ const Workshop = ({ theTheme }) => {
 
   return (
     <div className={`Workshop border px-[5%]  z-10 pt-12 pb-12 flex flex-col items-center justify-center gap-50 ${gradient} rounded-50`}>
-      <h1 className={`Workshop-title z-10 h1 text-black transition-bg duration-500`}>Request a workshop</h1>
+      <h1 className={`Workshop-title z-10 h1 text-black transition-bg duration-500`}>Request a Workshop</h1>
       {/* <h2 className='text-3xl w-[80%] text-center'>1 - 3 hour long workshops in P5.js, EV3, and Python for students from grades 3-12</h2> */}
       <div className='flex flex-wrap gap-10 box-border items-center justify-center'>
         {workshopsList.map((info) => (

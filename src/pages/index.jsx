@@ -91,7 +91,7 @@ export default function Home() {
 
 
       <div ref={aboutRef} className="About-us flex flex-col h-fit gap-50 w-full">
-        <h1 className={`h1 z-10 ${theme}`}>About us</h1>
+        <h1 className={`h1 z-10 ${theme}`}>About Us</h1>
         <div className='flex flex-col items-center justify-between gap-25 z-10 flex-wrap '>
           <Image className='w-full max-w-[750px] rounded-50 aspect-video object-cover z-10' src={eventBackground1}/>
           <p className={`w-full text-white max-w-[900px] text-center text-[20px] z-10`}>The Scarborough STEM Alliance is a student-run network of robotics teams. We give back to the community by hosting dynamic showcases, workshops, and scrimmages across the community through the cooperation of member teams. <br/> <br/> We pride ourselves on our extensive mentorship network across the Scarborough FLL teams. As a union of teams, we provide the perfect platform to share ideas, resources, and mentors no matter the level of experience. We forge lasting friendships and community bonds as we all learn together.</p>
@@ -110,12 +110,12 @@ export default function Home() {
       >
         <div ref={eventsRef}
         className="Events flex flex-col gap-50">
-          <h2 className={`Events-title h1 ${theme} text-white w-full`}>Past events</h2>
+          <h2 className={`Events-title h1 ${theme} text-white w-full`}>Past Events</h2>
           <Event/>
         </div>
 
         <div ref={teamRef} className={`Sponsors flex flex-col items-center w-full gap-50`}>
-          <h1 className={`Sponsors-title h1 text-white text-stroke-white`}>Our team</h1>
+          <h1 className={`Sponsors-title h1 text-white text-stroke-white`}>Our Team</h1>
           {/* <Sponsor></Sponsor> */}
           <Team/>
           {/* <button className={`Sponsors-button bg-gradient-to-r from-blue-dark to-blue-normal button px-32 py-9 rounded-full shadow-xs bg-white w-fit`}>
@@ -127,7 +127,7 @@ export default function Home() {
         {/* <Volunteer theTheme={theme}/> */}
 
         <div ref={faqRef} className={`FAQ flex flex-col gap-50 w-full`}>
-          <h2 className={`FAQ-title h1 ${theme} text-white`}>Frequently asked questions</h2>
+          <h2 className={`FAQ-title h1 ${theme} text-white`}>Frequently Asked Questions</h2>
           {/* Component */}
           <FAQ/>
         </div>

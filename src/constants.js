@@ -105,7 +105,7 @@ export const FAQContent = [
         question: "What is Scarborough STEM Alliance?",
         answer:
             "Scarborough STEM Alliance (SSA) is a non-profit organization dedicated to bringing STEM (Science, Technology, Engineering, and Mathematics) education to youths. We organize workshops and showcases to promote STEM learning and inspire the next generation of innovators.",
-        isActive: true
+        isActive: false
     },
     {
         id: 2,

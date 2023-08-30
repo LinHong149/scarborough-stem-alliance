@@ -80,3 +80,8 @@ body {
 .text-stroke-white {
     -webkit-text-stroke: 5px #DDDDDD;
 }
+
+.test-height {
+    display: grid;
+    grid-template-rows: minmax(20vh, auto);
+}

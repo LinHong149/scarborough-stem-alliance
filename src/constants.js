@@ -4,6 +4,37 @@ import eventBackground3 from './assets/eventBackground3.png';
 import eventBackground4 from './assets/eventBackground4.png';
 import eventBackground5 from './assets/eventBackground5.png';
 
+export const teamPeople = [
+    {
+        image: eventBackground1,
+        name: "Jim"
+    },
+    {
+        image: eventBackground2,
+        name: "Wim"
+    },
+    {
+        image: eventBackground3,
+        name: "Jim"
+    },
+    {
+        image: eventBackground2,
+        name: "Wim"
+    },
+    {
+        image: eventBackground3,
+        name: "Jim"
+    },
+    {
+        image: eventBackground2,
+        name: "Wim"
+    },
+    {
+        image: eventBackground3,
+        name: "Jim"
+    },
+]
+
 export const footer = [
     {
         title: "About Us",
@@ -48,7 +79,7 @@ export const FAQContent = [
     },
     {
         id: 2,
-        question: "Who can participate in SSA workshops and showcases?",
+        question: "Who can participate in workshops and showcases?",
         answer:
             "SSA workshops and showcases are open to all youths, ranging from elementary to high school students. We aim to provide accessible and inclusive STEM learning opportunities for students of all backgrounds and skill levels.",
         isActive: false

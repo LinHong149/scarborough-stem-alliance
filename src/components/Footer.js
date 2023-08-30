@@ -39,7 +39,7 @@ const Footer = () => {
             </div>
           ))}
         </div>
-        <MailingList/>
+        {/* <MailingList/> */}
     </div>
   )
 }

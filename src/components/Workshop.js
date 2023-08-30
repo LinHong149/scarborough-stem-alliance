@@ -34,16 +34,9 @@ const WorkshopItem = ({ isActive, isSchool, inView, onClick }) => {
   );
 };
 
-const Workshop = ({ inView }) => {
-  const [activity, setActivity] = useState(true);
-
-  const handleItemClick = (isActive) => {
-    setActivity(isActive);
-  };
-
-  return (
-    <div className={`Workshop-section flex gap-25 h-min border-grey items-center`}>
-      <div className={`Workshop-nav z-10 w-1/2 flex flex-col gap-16 h-fit`}>
+const WorkshopV1 = () => {
+  <div className={`Workshop-section flex gap-25 h-min border-grey items-center flex-wrap`}>
+      <div className={`Workshop-nav relative z-10 min-w-[300px] flex flex-col gap-16 h-fit`}>
         <WorkshopItem className=' cursor-pointer'
           isActive={activity}
           isSchool={true}
@@ -57,7 +50,7 @@ const Workshop = ({ inView }) => {
           onClick={() => handleItemClick(false)}
         />
       </div>
-      <div className='relative z-10 w-1/2 h-[60vh]'>
+      <div className='relative z-10 grow min-w-[300px] h-[60vh]'>
         <Image
             src={eventBackground1}
             className={`Workshop-image absolute w-full h-full object-cover rounded-50 object-contain border-2 transition-all duration-500
@@ -70,6 +63,38 @@ const Workshop = ({ inView }) => {
         />
       </div>
     </div>
+}
+
+const Card = ({title, text}) => {
+  return(
+    <div className='bg-black rounded-2xl w-1/4 text-white flex flex-col items-center p-6 gap-4'>
+      <h3 className='h3'>{title}</h3>
+      <p>{text}</p>
+      <a className='text-black rounded-50 p-2 pl-6 pr-6 w-fit bg-blue-normal hover:bg-blue-dark'>Request Workshop</a>
+    </div>
+  )
+}
+
+const Workshop = ({ inView, theTheme }) => {
+  const [activity, setActivity] = useState(true);
+  const gradient = 'bg-gradient-to-r from-blue-dark to-blue-normal';
+
+  const handleItemClick = (isActive) => {
+    setActivity(isActive);
+  };
+
+  return (
+    <div className={`Workshop border z-10 mt-32 mb-32 pt-12 pb-12 flex flex-col items-center justify-center gap-50 ${gradient} rounded-50`}>
+      <h1 className={`Workshop-title z-10 h1 text-black transition-bg duration-500`}>Request a workshop</h1>
+      {/* <h2 className='text-3xl w-[80%] text-center'>1 - 3 hour long workshops in P5.js, EV3, and Python for students from grades 3-12</h2> */}
+      <div className='flex gap-10 items-center justify-center'>
+        <Card title="P5.js" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries."/>
+        <Card title="EV3" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries."/>
+        <Card title="Python" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries."/>
+      </div>
+      {/* <button className='bg-black text-xl rounded-50 p-2 pl-6 pr-6 w-fit text-blue-normal'>Learn More</button> */}
+    </div>
+    
   );
 };
 

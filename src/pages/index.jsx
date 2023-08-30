@@ -8,6 +8,8 @@ import Image from 'next/image'
 
 import Stats from '../components/Stats'
 import Workshop from '../components/Workshop'
+import Volunteer from '../components/Volunteer'
+import Team from '../components/Team'
 import Event from '../components/Event';
 import Sponsor from '../components/Sponsor';
 import FAQ from '../components/FAQ'
@@ -62,14 +64,11 @@ export default function Home() {
         <h1 className={`h1 z-10 ${theme}`}>About us</h1>
         <div className='flex flex-col items-center justify-between gap-25 z-10 flex-wrap '>
           <Image className='w-full max-w-[750px] rounded-50 aspect-video object-cover z-10' src={eventBackground1}/>
-          <p className={`w-full text-white max-w-[900px] text-center text-[20px] z-10`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium soluta deleniti veniam nobis amet ad facilis totam enim! Consequuntur voluptates laudantium maiores rem magni repellat eligendi. Beatae doloremque qui incidunt non earum ducimus ut quia, officia necessitatibus! Asperiores, neque quidem.</p>
+          <p className={`w-full text-white max-w-[900px] text-center text-[20px] z-10`}>The Scarborough STEM Alliance is a student-run network of robotics teams. We give back to the community by hosting dynamic showcases, workshops, and scrimmages across the community through the cooperation of member teams. <br/> <br/> We pride ourselves on our extensive mentorship network across the Scarborough FLL teams. As a union of teams, we provide the perfect platform to share ideas, resources, and mentors no matter the level of experience. We forge lasting friendships and community bonds as we all learn together.</p>
         </div>
       </div>
 
-      <div className={`Workshop z-10 h-[120vh] flex flex-col justify-center gap-50`}>
-        <h1 className={`Workshop-title z-10 h1 ${theme} transition-bg duration-500`}>Workshops for you</h1>
-        <Workshop inView={inView} />
-      </div>
+      <Workshop theTheme={theme}/>
 
       {/* <Image className='absolute top-0 w-screen left-0 -z-1 h-[150vh] object-cover object-bottom'
       src={CloudBackground}/> */}
@@ -81,17 +80,21 @@ export default function Home() {
       >
         <div
         className="Events flex flex-col gap-50">
-          <h2 className={`Events-title h1 ${theme} text-white w-full`}>Our events</h2>
+          <h2 className={`Events-title h1 ${theme} text-white w-full`}>Past events</h2>
           <Event/>
         </div>
 
         <div className={`Sponsors flex flex-col items-center w-full gap-50 py-72`}>
-          <h1 className={`Sponsors-title h1 text-white text-stroke-white`}>Our sponsors</h1>
-          <Sponsor></Sponsor>
-          <button className={`Sponsors-button bg-gradient-to-r from-blue-dark to-blue-normal button px-32 py-9 rounded-full shadow-xs bg-white w-fit`}>
+          <h1 className={`Sponsors-title h1 text-white text-stroke-white`}>Our team</h1>
+          {/* <Sponsor></Sponsor> */}
+          <Team/>
+          {/* <button className={`Sponsors-button bg-gradient-to-r from-blue-dark to-blue-normal button px-32 py-9 rounded-full shadow-xs bg-white w-fit`}>
             <p className={`Sponsor-CTA `}>Sponsor Now</p>
-          </button>
+          </button> */}
         </div>
+
+
+        {/* <Volunteer theTheme={theme}/> */}
 
         <div className={`FAQ flex flex-col gap-50`}>
           <h2 className={`FAQ-title h1 ${theme} text-white`}>Frequently asked questions</h2>
@@ -108,7 +111,7 @@ export default function Home() {
           </button>
         </div> */}
 
-        <div className={`Footer bg-blue-background w-screen h-screen -translate-x-[75px] bg-gray-900 text-white py-8 rounded-t-50`}>
+        <div className={`Footer bg-blue-background w-screen -translate-x-[75px] bg-gray-900 text-white py-8 rounded-t-50`}>
           <Footer/>
         </div>
       </div>

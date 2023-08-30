@@ -14,7 +14,7 @@ const EventItem = ({ eventTitle, eventDate, eventImage }) => {
       <h3 className={`Event-name h3 text-white z-10`}>{eventTitle}</h3>
       <p className={`Event-date text-white z-10`}>{eventDate}</p>
       <Image className="absolute top-0 left-0 w-full h-full object-cover object-center h-full w-full -z-5" src={eventImage} alt={eventTitle} layout="fill" />
-      <div class="absolute inset-0 bg-black opacity-30 z-5"></div>
+      <div class="absolute inset-0 bg-black opacity-20 z-5"></div>
     </div>
   )
 }

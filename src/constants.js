@@ -4,6 +4,21 @@ import eventBackground3 from './assets/eventBackground3.png';
 import eventBackground4 from './assets/eventBackground4.png';
 import eventBackground5 from './assets/eventBackground5.png';
 
+export const contactsList = [
+    {
+        diisplayName: "scarborough.stem.alliance@gmail.com",
+        link: "https://mail.google.com/mail/u/0/#inbox?compose=CllgCJNstjWSrWQJlnSxFrxVQRRnBPsMvNXpDVGLrQSkfkfRBGhChhWdhJwWxDCkcXGdvKgVTrg"
+    },
+    {
+        diisplayName: "Instagram",
+        link: "https://www.instagram.com/scarborough.stem.alliance/"
+    },
+    {
+        diisplayName: "Youtube",
+        link: "https://www.youtube.com/@ScarboroughSTEMAlliance"
+    },
+]
+
 export const teamPeople = [
     {
         image: eventBackground1,
@@ -133,10 +148,4 @@ export const eventInfo = [
         title: "Event Title",
         date: 'March 1st, 2023'
     },
-]
-
-export const sponsorsList = [
-    {
-        
-    }
 ]

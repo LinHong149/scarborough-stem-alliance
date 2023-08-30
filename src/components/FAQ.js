@@ -29,7 +29,7 @@ const FAQ = () => {
   };
 
   return (
-    <div className='FAQ flex flex-wrap gap-25'>
+    <div className='FAQ flex flex-wrap gap-25 w-full'>
       {faqItems.map((faqItem) => (
         <FAQItem 
           key={faqItem.id}

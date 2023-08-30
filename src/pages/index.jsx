@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 // import CloudBackground from '../assets/CloudBackground.png'
 import eventBackground1 from '../assets/eventBackground1.png'
 
 import Image from 'next/image'
-
+import Navbar from "@/components/Navbar";
 import Stats from '../components/Stats'
 import Workshop from '../components/Workshop'
 import Volunteer from '../components/Volunteer'
@@ -13,6 +13,7 @@ import Team from '../components/Team'
 import Event from '../components/Event';
 import Sponsor from '../components/Sponsor';
 import FAQ from '../components/FAQ'
+import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 
 const style = {
@@ -23,6 +24,14 @@ const style = {
 
 
 export default function Home() {
+  const homeRef = useRef(null)
+  const aboutRef = useRef(null)
+  const workshopsRef = useRef(null)
+  const eventsRef = useRef(null)
+  const teamRef = useRef(null)
+  const faqRef = useRef(null)
+  const contactRef = useRef(null)
+
   const [isVisible, setIsVisible] = useState(false);
   const [theme, setTheme] = useState('');
   const [viewRef, inView] = useInView({
@@ -49,18 +58,39 @@ export default function Home() {
     }
   })
 
+  const scrollToRef = (ref) => {
+    // ref.current.scrollIntoView({ behavior: 'smooth' });
+    window.scrollTo({
+      top: ref.current.offsetTop,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <main 
     ref={viewRef}
-    className={`Body px-24 w-screen overflow-hidden transition-bg duration-500 ${isVisible ? 'bg-blue-background opacity-100' : 'bg-white opacity-100'}`}>
+    className={`Body flex flex-col items-center border px-24 w-screen overflow-hidden box-border transition-bg duration-500 gap-72 ${isVisible ? 'bg-blue-background opacity-100' : 'bg-white opacity-100'}`}>
 
-      <div className={`Hero h-[80vh] flex items-end pb-36`}>
-        <h1 className={`Hero-title ${theme} h0 z-10`}>Hello! <br/> We are SSA</h1>
+      <Navbar 
+        scrollToRefFun = {scrollToRef}
+        homeRef = {homeRef}
+        aboutRef = {aboutRef}
+        workshopsRef = {workshopsRef}
+        eventsRef = {eventsRef}
+        teamRef = {teamRef}
+        faqRef = {faqRef}
+        contactRef = {contactRef}
+      />
+
+      <div className='w-full h-100vh'>
+        <div ref={homeRef} className={`Hero h-[80vh] flex items-end pb-36 w-full`}>
+          <h1 className={`Hero-title ${theme} h0 z-10`}>Hello! <br/> We are SSA</h1>
+        </div>
+        <Stats className="w-full"/>
       </div>
 
-      <Stats/>
 
-      <div className="About-us flex flex-col h-fit gap-50">
+      <div ref={aboutRef} className="About-us flex flex-col h-fit gap-50 w-full pb-72">
         <h1 className={`h1 z-10 ${theme}`}>About us</h1>
         <div className='flex flex-col items-center justify-between gap-25 z-10 flex-wrap '>
           <Image className='w-full max-w-[750px] rounded-50 aspect-video object-cover z-10' src={eventBackground1}/>
@@ -68,23 +98,23 @@ export default function Home() {
         </div>
       </div>
 
-      <Workshop theTheme={theme}/>
-
-      {/* <Image className='absolute top-0 w-screen left-0 -z-1 h-[150vh] object-cover object-bottom'
-      src={CloudBackground}/> */}
+      <div ref={workshopsRef}>
+        <Workshop theTheme={theme}/>
+      </div>
 
 
       <div
+      className='w-full flex flex-col gap-72'
       // ref={viewRef}
       // className={isVisible? "Events bg-gradient-to-r from-black to-grey w-[100vw] px-[75px] flex flex-col gap-50 py-52 rounded-t-50 -translate-x-[75px] z-0!" : ""}
       >
-        <div
+        <div ref={eventsRef}
         className="Events flex flex-col gap-50">
           <h2 className={`Events-title h1 ${theme} text-white w-full`}>Past events</h2>
           <Event/>
         </div>
 
-        <div className={`Sponsors flex flex-col items-center w-full gap-50 py-72`}>
+        <div ref={teamRef} className={`Sponsors flex flex-col items-center w-full gap-50`}>
           <h1 className={`Sponsors-title h1 text-white text-stroke-white`}>Our team</h1>
           {/* <Sponsor></Sponsor> */}
           <Team/>
@@ -96,7 +126,7 @@ export default function Home() {
 
         {/* <Volunteer theTheme={theme}/> */}
 
-        <div className={`FAQ flex flex-col gap-50`}>
+        <div ref={faqRef} className={`FAQ flex flex-col gap-50 w-full`}>
           <h2 className={`FAQ-title h1 ${theme} text-white`}>Frequently asked questions</h2>
           {/* Component */}
           <FAQ/>
@@ -110,10 +140,13 @@ export default function Home() {
             <p className={`Mailing-CTA`}>Submit</p>
           </button>
         </div> */}
-
-        <div className={`Footer bg-blue-background w-screen -translate-x-[75px] bg-gray-900 text-white py-8 rounded-t-50`}>
-          <Footer/>
+        <div ref={contactRef}>
+          <Contact/>
         </div>
+
+        {/* <div className={`Footer bg-blue-background w-screen -translate-x-[75px] bg-gray-900 text-white py-8 rounded-t-50`}>
+          <Footer/>
+        </div> */}
       </div>
 
     </main>

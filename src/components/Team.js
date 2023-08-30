@@ -18,7 +18,7 @@ const TeamItem = ({PersonImage, PersonName}) => {
 
 const Team = () => {
   return (
-    <div className={`Teams-container items-center justify-center w-full flex flex-wrap gap-50`}>
+    <div className={`Teams-container items-center justify-center w-full h-fit flex flex-wrap gap-50`}>
         {teamPeople.map((index) => (
             <TeamItem PersonImage={index.image} PersonName={index.name}/>
         ))}

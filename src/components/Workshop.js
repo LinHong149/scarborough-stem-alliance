@@ -84,7 +84,7 @@ const Workshop = ({ inView, theTheme }) => {
   };
 
   return (
-    <div className={`Workshop border z-10 mt-32 mb-32 pt-12 pb-12 flex flex-col items-center justify-center gap-50 ${gradient} rounded-50`}>
+    <div className={`Workshop border z-10 pt-12 pb-12 flex flex-col items-center justify-center gap-50 ${gradient} rounded-50`}>
       <h1 className={`Workshop-title z-10 h1 text-black transition-bg duration-500`}>Request a workshop</h1>
       {/* <h2 className='text-3xl w-[80%] text-center'>1 - 3 hour long workshops in P5.js, EV3, and Python for students from grades 3-12</h2> */}
       <div className='flex gap-10 items-center justify-center'>

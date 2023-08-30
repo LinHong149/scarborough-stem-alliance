@@ -28,7 +28,7 @@ const Stats = () => {
   }, []);
 
   return (
-    <div className={`Stats w-100 flex flex-wrap space-between gap-25 h-fit mb-[20vh]`}>
+    <div className={`Stats flex flex-wrap space-between gap-25 h-fit w-full`}>
       {counters.map((info) => (
         <div
           key={info.description}

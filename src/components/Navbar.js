@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import SSA from '../assets/SSA.png';
 
-const Navbar = () => {
+const Navbar = ({scrollToRefFun, homeRef, aboutRef, workshopsRef, eventsRef, teamRef, faqRef, contactRef}) => {
   const NavItemStyle = 'flex justify-between items-center h-min text-white flex flex-col'
   const NavItemTextStyle = 'h-full px-1 text-p16 after:transition after:duration-200 hover:text-white after:bg-white after:w-0 after:aspect-square hover:after:w-1 hover:after:rounded-full'
   const NavItemTextStyleMobile = 'h-full px-1 text-p16'
@@ -36,9 +36,9 @@ const Navbar = () => {
     return (
       <div className={`navbar flex flex-col gap-2 w-full px-16 mt-4 fixed`}>
         <nav className={`flex justify-between items-center px-8 rounded-full bg-transparent backdrop-blur-md transition-300`}>
-          <Link className={`${NavItemStyle} ${NavItemImageStyle} `} href="/" alt="ssalogo">
+          <p className={`${NavItemStyle} ${NavItemImageStyle} `} href="/" alt="ssalogo">
             <Image className={`${NavItemImageStyle}`} src={SSA} />
-          </Link>
+          </p>
           <svg
           onClick={() => toggleNavMobile()}
           fill='#F6F6F6'
@@ -46,18 +46,22 @@ const Navbar = () => {
         </nav>
         {mobileNav ? 
         <div className='popup-nav flex flex-col justify-around w-full h-fit gap-8 py-8 items-center rounded-[40px] bg-transparent backdrop-blur-md transition-300 transition-all' >
-          <Link className={`${NavItemStyle} ${NavItemTextStyleMobile}`} href="/">Home</Link>
-          <Link className={`${NavItemStyle} ${NavItemTextStyleMobile}`} href="/works">Our Works</Link>
-          <Link className={`${NavItemStyle} ${NavItemTextStyleMobile}`} href="/partners">Partners</Link>
-          <Link className={`${NavItemStyle} ${NavItemTextStyleMobile}`} href="/team">Team</Link>
-          <Link className={`${NavItemStyle} ${NavItemTextStyleMobile}`} href="/contact">Contact</Link>
+          <p className={`${NavItemStyle} ${NavItemTextStyleMobile}`}>Home</p>
+          <p className={`${NavItemStyle} ${NavItemTextStyleMobile}`}>About us</p>
+          <p className={`${NavItemStyle} ${NavItemTextStyleMobile}`}>Workshops</p>
+          <p className={`${NavItemStyle} ${NavItemTextStyleMobile}`}>Events</p>
+          <p className={`${NavItemStyle} ${NavItemTextStyleMobile}`}>Team</p>
+          <p className={`${NavItemStyle} ${NavItemTextStyleMobile}`}>Faq</p>
+          <p className={`${NavItemStyle} ${NavItemTextStyleMobile}`}>Contact</p>
         </div>:
         <div className='popup-nav flex flex-col justify-around w-full h-fit gap-8 py-8 items-center rounded-[40px] bg-transparent backdrop-blur-md transition-300 transition-all hidden' >
-          <Link className={`${NavItemStyle} ${NavItemTextStyleMobile}`} href="/">Home</Link>
-          <Link className={`${NavItemStyle} ${NavItemTextStyleMobile}`} href="/works">Our Works</Link>
-          <Link className={`${NavItemStyle} ${NavItemTextStyleMobile}`} href="/partners">Partners</Link>
-          <Link className={`${NavItemStyle} ${NavItemTextStyleMobile}`} href="/team">Team</Link>
-          <Link className={`${NavItemStyle} ${NavItemTextStyleMobile}`} href="/contact">Contact</Link>
+          <p onClick={() => scrollToRefFun(homeRef)}  className={`${NavItemStyle} ${NavItemTextStyleMobile}`}>Home</p>
+          <p onClick={() => scrollToRefFun(aboutRef)} className={`${NavItemStyle} ${NavItemTextStyleMobile}`}>About us</p>
+          <p onClick={() => scrollToRefFun(workshopsRef)} className={`${NavItemStyle} ${NavItemTextStyleMobile}`}>Workshops</p>
+          <p onClick={() => scrollToRefFun(eventsRef)} className={`${NavItemStyle} ${NavItemTextStyleMobile}`}>Events</p>
+          <p onClick={() => scrollToRefFun(teamRef)}  className={`${NavItemStyle} ${NavItemTextStyleMobile}`}>Team</p>
+          <p onClick={() => scrollToRefFun(faqRef)}  className={`${NavItemStyle} ${NavItemTextStyleMobile}`}>Faq</p>
+          <p onClick={() => scrollToRefFun(contactRef)}  className={`${NavItemStyle} ${NavItemTextStyleMobile}`}>Contact</p>
         </div>}
 
         
@@ -68,15 +72,17 @@ const Navbar = () => {
   return (
     <div className={`navbar w-full px-16 mt-4 fixed`}>
       <nav className={`flex justify-between items-center px-8 rounded-full bg-transparent backdrop-blur-md transition-300`}>
-        <Link className={`${NavItemStyle} ${NavItemImageStyle} `} href="/" alt="ssalogo">
+        <p className={`${NavItemStyle} ${NavItemImageStyle} `}>
           <Image className={`${NavItemImageStyle}`} src={SSA} />
-        </Link>
+        </p>
         <div className='flex flex-row w-fit h-fit gap-10 items-center hover:align-end ' >
-          <Link className={`${NavItemStyle} ${NavItemTextStyle}`} href="/">Home</Link>
-          <Link className={`${NavItemStyle} ${NavItemTextStyle}`} href="/works">Our Works</Link>
-          <Link className={`${NavItemStyle} ${NavItemTextStyle}`} href="/partners">Partners</Link>
-          <Link className={`${NavItemStyle} ${NavItemTextStyle}`} href="/team">Team</Link>
-          <Link className={`${NavItemStyle} ${NavItemTextStyle}`} href="/contact">Contact</Link>
+          <p onClick={() => scrollToRefFun(homeRef)} className={`${NavItemStyle} ${NavItemTextStyle}`}>Home</p>
+          <p onClick={() => scrollToRefFun(aboutRef)} className={`${NavItemStyle} ${NavItemTextStyle}`}>About us</p>
+          <p onClick={() => scrollToRefFun(workshopsRef)} className={`${NavItemStyle} ${NavItemTextStyle}`}>Workshops</p>
+          <p onClick={() => scrollToRefFun(eventsRef)} className={`${NavItemStyle} ${NavItemTextStyle}`}>Events</p>
+          <p onClick={() => scrollToRefFun(teamRef)} className={`${NavItemStyle} ${NavItemTextStyle}`}>Team</p>
+          <p onClick={() => scrollToRefFun(faqRef)} className={`${NavItemStyle} ${NavItemTextStyle}`}>Faq</p>
+          <p onClick={() => scrollToRefFun(contactRef)} className={`${NavItemStyle} ${NavItemTextStyle}`}>Contact</p>
         </div>
       </nav>
     </div>

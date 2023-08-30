@@ -85,3 +85,15 @@ body {
     display: grid;
     grid-template-rows: minmax(20vh, auto);
 }
+
+.grid-parent {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 640px) {
+    .grid-parent {
+      grid-template-columns: repeat(2, 1fr);
+    }
+}

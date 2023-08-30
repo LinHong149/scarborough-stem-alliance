@@ -1,4 +1,7 @@
-import React, { useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react'
+import { useInView } from 'react-intersection-observer';
+
+import { workshopsList } from '@/constants';
 import Image from 'next/image';
 import eventBackground1 from '../assets/eventBackground1.png';
 import eventBackground2 from '../assets/eventBackground2.png';
@@ -67,7 +70,7 @@ const WorkshopV1 = () => {
 
 const Card = ({title, text}) => {
   return(
-    <div className='bg-black rounded-2xl w-1/4 text-white flex flex-col items-center p-6 gap-4'>
+    <div className='min-w-[200px] grow shrink bg-black rounded-2xl w-1/4 text-white flex flex-col items-center p-6 gap-4'>
       <h3 className='h3'>{title}</h3>
       <p>{text}</p>
       <a className='text-black rounded-50 p-2 pl-6 pr-6 w-fit bg-blue-normal hover:bg-blue-dark'>Request Workshop</a>
@@ -75,22 +78,31 @@ const Card = ({title, text}) => {
   )
 }
 
-const Workshop = ({ inView, theTheme }) => {
+const Workshop = ({ theTheme }) => {
   const [activity, setActivity] = useState(true);
   const gradient = 'bg-gradient-to-r from-blue-dark to-blue-normal';
+  const [isVisible, setIsVisible] = useState(false);
+  const [personRef, inView] = useInView({
+      triggerOnce: true,
+  });
 
+  useEffect(() => {
+  setIsVisible(inView);
+  }, [inView]);
+
+  
   const handleItemClick = (isActive) => {
     setActivity(isActive);
   };
 
   return (
-    <div className={`Workshop border z-10 pt-12 pb-12 flex flex-col items-center justify-center gap-50 ${gradient} rounded-50`}>
+    <div className={`Workshop border px-[5%]  z-10 pt-12 pb-12 flex flex-col items-center justify-center gap-50 ${gradient} rounded-50`}>
       <h1 className={`Workshop-title z-10 h1 text-black transition-bg duration-500`}>Request a workshop</h1>
       {/* <h2 className='text-3xl w-[80%] text-center'>1 - 3 hour long workshops in P5.js, EV3, and Python for students from grades 3-12</h2> */}
-      <div className='flex gap-10 items-center justify-center'>
-        <Card title="P5.js" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries."/>
-        <Card title="EV3" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries."/>
-        <Card title="Python" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries."/>
+      <div className='flex flex-wrap gap-10 box-border items-center justify-center'>
+        {workshopsList.map((info) => (
+          <Card title={info.title} text={info.text}/>
+        ))}
       </div>
       {/* <button className='bg-black text-xl rounded-50 p-2 pl-6 pr-6 w-fit text-blue-normal'>Learn More</button> */}
     </div>

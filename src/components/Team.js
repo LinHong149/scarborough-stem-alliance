@@ -1,5 +1,6 @@
 import { teamPeople } from '@/constants'
-import React from 'react'
+import React, { useRef, useState, useEffect } from 'react'
+import { useInView } from 'react-intersection-observer';
 import Image from 'next/image'
 import SSA from '../assets/SSA.png'
 
@@ -8,12 +9,21 @@ import SSA from '../assets/SSA.png'
 // import eventBackground3 from '../assets/eventBackground3.png';
 
 const TeamItem = ({PersonImage, PersonName}) => {
-  return (
-    <div className={`Teams-Teamflex w-[15%] flex-col flex justify-center items-center gap-6`}>
-        <Image className={`relative w-full h-full object-cover aspect-square rounded-full`} src={PersonImage}></Image>
-        <h3 className='text-white'>{PersonName}</h3>
-    </div>
-  )
+    const [isVisible, setIsVisible] = useState(false);
+    const [personRef, inView] = useInView({
+        triggerOnce: true,
+    });
+
+    useEffect(() => {
+    setIsVisible(inView);
+    }, [inView]);
+
+    return (
+        <div ref={personRef} className={`transition-all duration-300 ease-in-out transform ${isVisible ? 'scale-100 opacity-100' : 'scale-0 opacity-0'} Teams-Teamflex w-[15%] flex-col flex justify-center items-center gap-6 min-w-[150px]`}>
+            <Image className={`relative w-full h-full object-cover aspect-square rounded-full`} src={PersonImage}></Image>
+            <h3 className='text-white'>{PersonName}</h3>
+        </div>
+    )
 }
 
 const Team = () => {

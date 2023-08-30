@@ -69,7 +69,7 @@ export default function Home() {
   return (
     <main 
     ref={viewRef}
-    className={`Body flex flex-col items-center border px-24 w-screen overflow-hidden box-border transition-bg duration-500 gap-72 ${isVisible ? 'bg-blue-background opacity-100' : 'bg-white opacity-100'}`}>
+    className={`Body flex flex-col items-center border px-24 w-screen overflow-hidden box-border transition-bg duration-500 gap-52 sm:gap-72 ${isVisible ? 'bg-blue-background opacity-100' : 'bg-white opacity-100'}`}>
 
       <Navbar 
         scrollToRefFun = {scrollToRef}
@@ -90,7 +90,7 @@ export default function Home() {
       </div>
 
 
-      <div ref={aboutRef} className="About-us flex flex-col h-fit gap-50 w-full pb-72">
+      <div ref={aboutRef} className="About-us flex flex-col h-fit gap-50 w-full">
         <h1 className={`h1 z-10 ${theme}`}>About us</h1>
         <div className='flex flex-col items-center justify-between gap-25 z-10 flex-wrap '>
           <Image className='w-full max-w-[750px] rounded-50 aspect-video object-cover z-10' src={eventBackground1}/>
@@ -104,7 +104,7 @@ export default function Home() {
 
 
       <div
-      className='w-full flex flex-col gap-72'
+      className='w-full flex flex-col  gap-52 sm:gap-72'
       // ref={viewRef}
       // className={isVisible? "Events bg-gradient-to-r from-black to-grey w-[100vw] px-[75px] flex flex-col gap-50 py-52 rounded-t-50 -translate-x-[75px] z-0!" : ""}
       >

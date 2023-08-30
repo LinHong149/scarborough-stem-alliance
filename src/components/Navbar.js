@@ -71,7 +71,7 @@ const Navbar = ({scrollToRefFun, homeRef, aboutRef, workshopsRef, eventsRef, tea
 
   return (
     <div className={`navbar w-full px-16 mt-4 fixed`}>
-      <nav className={`flex justify-between items-center px-8 rounded-full bg-transparent backdrop-blur-md transition-300`}>
+      <nav className={`flex justify-between items-center px-8 rounded-full bg-white bg-opacity-5 backdrop-blur-md transition-300`}>
         <p className={`${NavItemStyle} ${NavItemImageStyle} `}>
           <Image className={`${NavItemImageStyle}`} src={SSA} />
         </p>

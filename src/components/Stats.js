@@ -18,7 +18,7 @@ const Stats = () => {
           return counter;
         })
       );
-    }, 20);
+    }, 30);
 
     return () => clearInterval(interval);
   }, []);

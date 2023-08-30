@@ -70,7 +70,7 @@ const WorkshopV1 = () => {
 
 const Card = ({title, text}) => {
   return(
-    <div className='min-w-[200px] grow shrink bg-black rounded-2xl w-1/4 text-white flex flex-col items-center p-6 gap-4'>
+    <div className='min-w-[200px] grow shrink bg-black rounded-2xl w-1/4 text-white flex flex-col items-center p-8 gap-4'>
       <h3 className='h3'>{title}</h3>
       <p>{text}</p>
       <a className='text-black rounded-50 p-2 pl-6 pr-6 w-fit bg-blue-normal hover:bg-blue-dark'>Request Workshop</a>

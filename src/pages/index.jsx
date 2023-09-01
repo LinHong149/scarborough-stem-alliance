@@ -7,6 +7,7 @@ import eventBackground1 from '../assets/eventBackground1.png'
 import Image from 'next/image'
 import Navbar from "@/components/Navbar";
 import Stats from '../components/Stats'
+import About from '../components/About'
 import Workshop from '../components/Workshop'
 import Volunteer from '../components/Volunteer'
 import Team from '../components/Team'
@@ -15,6 +16,7 @@ import Sponsor from '../components/Sponsor';
 import FAQ from '../components/FAQ'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
+import { CSSTransition } from 'react-transition-group'
 
 const style = {
   container: 'flex items-center justify-center h-screen bg-gray-200',
@@ -61,7 +63,7 @@ export default function Home() {
   const scrollToRef = (ref) => {
     // ref.current.scrollIntoView({ behavior: 'smooth' });
     window.scrollTo({
-      top: ref.current.offsetTop,
+      top: ref.current.offsetTop - 100,
       behavior: 'smooth'
     });
   };
@@ -83,22 +85,17 @@ export default function Home() {
       />
 
       <div className='w-full h-100vh'>
-        <div ref={homeRef} className={`Hero h-[80vh] flex items-end pb-36 w-full`}>
+        <div ref={homeRef} className={`Hero h-[80vh] items-end pb-36 w-full pt-20 flex items-center`}>
           <h1 className={`Hero-title ${theme} h0 z-10`}>Hello! <br/> We are SSA</h1>
         </div>
         <Stats className="w-full"/>
       </div>
 
-
-      <div ref={aboutRef} className="About-us flex flex-col h-fit gap-50 w-full">
-        <h1 className={`h1 z-10 ${theme}`}>About Us</h1>
-        <div className='flex flex-col items-center justify-between gap-25 z-10 flex-wrap '>
-          <Image className='w-full max-w-[750px] rounded-50 aspect-video object-cover z-10' src={eventBackground1}/>
-          <p className={`w-full text-white max-w-[900px] text-center text-[20px] z-10`}>The Scarborough STEM Alliance is a student-run network of robotics teams. We give back to the community by hosting dynamic showcases, workshops, and scrimmages across the community through the cooperation of member teams. <br/> <br/> We pride ourselves on our extensive mentorship network across the Scarborough FLL teams. As a union of teams, we provide the perfect platform to share ideas, resources, and mentors no matter the level of experience. We forge lasting friendships and community bonds as we all learn together.</p>
-        </div>
+      <div ref={aboutRef} >
+        <About theme={theme}/>
       </div>
 
-      <div ref={workshopsRef}>
+      <div ref={workshopsRef} className="w-full">
         <Workshop theTheme={theme}/>
       </div>
 

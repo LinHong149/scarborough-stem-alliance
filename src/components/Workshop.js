@@ -8,6 +8,8 @@ import eventBackground2 from '../assets/eventBackground2.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBook } from '@fortawesome/free-solid-svg-icons';
 import { faSchool } from '@fortawesome/free-solid-svg-icons';
+import { CSSTransition } from 'react-transition-group';
+
 
 const WorkshopItem = ({ isActive, isSchool, inView, onClick }) => {
   const active = 'bg-gradient-to-r from-blue-dark to-blue-normal';
@@ -68,43 +70,72 @@ const WorkshopV1 = () => {
     </div>
 }
 
-const Card = ({title, text}) => {
-  return(
-    <div className='min-w-[200px] grow shrink bg-black rounded-2xl w-1/4 text-white flex flex-col items-center p-8 gap-4'>
-      <h3 className='h3'>{title}</h3>
-      <p>{text}</p>
-      <a className='text-black rounded-50 p-2 pl-6 pr-6 w-fit bg-blue-normal hover:bg-blue-dark'>Request Workshop</a>
-    </div>
+
+
+// const Card = ({title, text}) => {
+//   const [isVisible, setIsVisible] = useState(false);
+//   const [cardRef, inView] = useInView({
+//       triggerOnce: false,
+//   });
+
+//   useEffect(() => {
+//   setIsVisible(inView);
+//   }, [inView]);
+
+//   console.log("isvis",isVisible)
+//   return(
+//     <div ref={cardRef} className={`min-w-[200px] grow shrink bg-black rounded-2xl w-1/4 text-white flex flex-col items-center p-8   transition-all duration-100 delay-100 ease-in-out gap-4 h-min`}>
+//       <h3 className='h3'>{title}</h3>
+//       <p className={` transition-all duration-2000 delay-100 ease-in-out text-white bg-white ${isVisible ? 'grid grid-cols-[minmax(20vh, auto)]' : 'flex opacity-0 max-h-0 h-0 overflow-hidden'} `}>{text}</p>
+//       {/* <a className={`flex transition delay-2000 duration-1000 ease-in text-black rounded-50 p-2 pl-6 pr-6 w-max bg-blue-normal hover:bg-blue-dark flex items-center justify-center `}>Request Workshop</a> */}
+//     </div>
+//   )
+// }
+
+const Card = ({title, text, visibility}) => {
+  
+  return (
+    <CSSTransition
+      in={visibility}
+      timeout={5000}
+      classNames="card"
+      unmountOnExit
+    >
+      <div className={`min-w-[200px] flex flex-grow shrink bg-black rounded-2xl w-1/4 text-white flex flex-col items-center p-8 transition-all duration-100 delay-2000 ease-in-out gap-4 h-min`}>
+        <h3 className='h3'>{title}</h3>
+        <p className={` transition-all duration-2000 delay-100 ease-in-out text-white text-center grid grid-cols-[minmax(20vh, auto)]`}>{text}</p>
+        <a className={`flex transition delay-2000 duration-1000 ease-in text-black rounded-50 p-2 pl-6 pr-6 w-max bg-blue-normal hover:bg-blue-dark flex items-center justify-center `}>Request Workshop</a>
+      </div>
+    </CSSTransition>
   )
 }
+
 
 const Workshop = ({ theTheme }) => {
   const [activity, setActivity] = useState(true);
   const gradient = 'bg-gradient-to-r from-blue-dark to-blue-normal';
-  const [isVisible, setIsVisible] = useState(false);
-  const [personRef, inView] = useInView({
-      triggerOnce: true,
-  });
-
-  useEffect(() => {
-  setIsVisible(inView);
-  }, [inView]);
-
-  
   const handleItemClick = (isActive) => {
     setActivity(isActive);
   };
 
+  const [isVisible, setIsVisible] = useState(true);
+  const [cardRef, inView] = useInView({
+      triggerOnce: true,
+  });
+  useEffect(() => {
+    setIsVisible(inView);
+  }, [inView]);
+
+  console.log("vis", isVisible)
   return (
-    <div className={`Workshop border px-[5%]  z-10 pt-12 pb-12 flex flex-col items-center justify-center gap-50 ${gradient} rounded-50`}>
+    <div className={`Workshop relative px-[5%] w-full flex z-10 pt-12 pb-12 flex flex-col items-center justify-center gap-50 ${gradient} rounded-50`}>
       <h1 className={`Workshop-title z-10 h1 text-black transition-bg duration-500`}>Request a Workshop</h1>
-      {/* <h2 className='text-3xl w-[80%] text-center'>1 - 3 hour long workshops in P5.js, EV3, and Python for students from grades 3-12</h2> */}
       <div className='flex flex-wrap gap-10 box-border items-center justify-center'>
         {workshopsList.map((info) => (
-          <Card title={info.title} text={info.text}/>
+          <Card title={info.title} text={info.text} visibility={isVisible}/>
         ))}
       </div>
-      {/* <button className='bg-black text-xl rounded-50 p-2 pl-6 pr-6 w-fit text-blue-normal'>Learn More</button> */}
+      <div ref={cardRef} className='absolute h-10 w-full bottom-0'></div>
     </div>
     
   );

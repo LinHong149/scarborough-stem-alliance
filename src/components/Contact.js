@@ -9,7 +9,7 @@ const Contact = ({ inView, theTheme }) => {
   };
 
   return (
-    <div className={`Contact border z-10 pt-12 pb-12 flex flex-col items-center justify-center gap-50 ${gradient} rounded-50 w-[calc(100vw-2rem)] mb-4 px-12 mr-auto ml-auto relative -left-20`}>
+    <div className={`Contact z-10 py-12 flex flex-col items-center justify-center gap-50 ${gradient} rounded-50  contact-padding mb-4 px-12 relative`}>
         <div className='flex flex-col items-center'>
           <h1 className={`Contact-title z-10 h1 text-black transition-bg duration-500`}>Let's Inspire Together</h1>
           <p className='text-xl w-[75%] text-center'>We are open to partnerships and sponsorships. Contact us to dicuss how we can turn your ideas into actionable realities.</p>

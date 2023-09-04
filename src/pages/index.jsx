@@ -71,7 +71,7 @@ export default function Home() {
   return (
     <main 
     ref={viewRef}
-    className={`Body flex flex-col items-center border px-24 w-screen overflow-hidden box-border transition-bg duration-500 gap-52 sm:gap-72 ${isVisible ? 'bg-blue-background opacity-100' : 'bg-white opacity-100'}`}>
+    className={`Body flex flex-col items-center border websitePadding w-screen overflow-hidden box-border transition-bg duration-500 gap-52 sm:gap-72 ${isVisible ? 'bg-blue-background opacity-100' : 'bg-white opacity-100'}`}>
 
       <Navbar 
         scrollToRefFun = {scrollToRef}
@@ -84,11 +84,11 @@ export default function Home() {
         contactRef = {contactRef}
       />
 
-      <div className='w-full h-100vh'>
-        <div ref={homeRef} className={`Hero h-[80vh] items-end pb-36 w-full pt-20 flex items-center`}>
-          <h1 className={`Hero-title ${theme} h0 z-10`}>Hello! <br/> We are SSA</h1>
+      <div className='w-full relative min-h-[90vh] flex flex-col justify-between pt-[15vh]'>
+        <div ref={homeRef} className={`Hero items-end w-full flex items-center `}>
+          <h1 className={`Hero-title ${theme} h0 z-10 h-fit`}>Hello! <br/> We are SSA</h1>
         </div>
-        <Stats className="w-full"/>
+        <Stats className="w-full bg-white"/>
       </div>
 
       <div ref={aboutRef} >

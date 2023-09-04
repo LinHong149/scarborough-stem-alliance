@@ -34,8 +34,8 @@ const Navbar = ({scrollToRefFun, homeRef, aboutRef, workshopsRef, eventsRef, tea
 
   if (windowWidth <= 800) {
     return (
-      <div className={`navbar flex flex-col gap-2 w-full px-16 mt-4 fixed`}>
-        <nav className={`flex justify-between items-center px-8 rounded-full bg-transparent backdrop-blur-md transition-300`}>
+      <div className={`navbar flex flex-col gap-2 w-full px-4 mt-4 fixed`}>
+        <nav className={`flex justify-between items-center px-8 rounded-full bg-white bg-opacity-10 backdrop-blur-md transition-300`}>
           <p className={`${NavItemStyle} ${NavItemImageStyle} `} href="/" alt="ssalogo">
             <Image className={`${NavItemImageStyle}`} src={SSA} />
           </p>

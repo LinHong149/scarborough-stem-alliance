@@ -19,7 +19,7 @@ const TeamItem = ({PersonImage, PersonName}) => {
     }, [inView]);
 
     return (
-        <div ref={personRef} className={`transition-all delay-100 duration-700 ease-in-out transform ${isVisible ? 'scale-100 opacity-100' : 'scale-0 opacity-0'} Teams-Teamflex w-[15%] flex-col flex justify-center items-center gap-6 min-w-[150px]`}>
+        <div ref={personRef} className={`transition-all delay-100 duration-700 ease-in-out transform ${isVisible ? 'scale-100 opacity-100' : 'scale-0 opacity-0'} Teams-Teamflex w-[15%] flex-col flex justify-center items-center gap-6 min-w-[200px] max-w-[300px]`}>
             <Image className={`relative w-full h-full object-cover aspect-square rounded-full`} src={PersonImage}></Image>
             <h3 className='text-white'>{PersonName}</h3>
         </div>

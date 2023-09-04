@@ -145,22 +145,22 @@ export const eventInfo = [
     },
     {
         image: eventBackground2,
-        title: "Event Title",
+        title: "Event Title2",
         date: 'March 1st, 2023'
     },
     {
         image: eventBackground3,
-        title: "Event Title",
+        title: "Event Title3",
         date: 'March 1st, 2023'
     },
     {
         image: eventBackground4,
-        title: "Event Title",
+        title: "Event Title4",
         date: 'March 1st, 2023'
     },
     {
         image: eventBackground5,
-        title: "Event Title",
+        title: "Event Title5",
         date: 'March 1st, 2023'
     },
 ]

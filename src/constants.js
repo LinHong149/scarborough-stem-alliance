@@ -1,3 +1,6 @@
+import { faEnvelope, faY } from '@fortawesome/free-solid-svg-icons';
+import { faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
+
 import eventBackground1 from './assets/eventBackground1.png';
 import eventBackground2 from './assets/eventBackground2.png';
 import eventBackground3 from './assets/eventBackground3.png';
@@ -21,15 +24,18 @@ export const workshopsList = [
 
 export const contactsList = [
     {
-        diisplayName: "scarborough.stem.alliance@gmail.com",
+        icon: faEnvelope,
+        displayName: "scarborough.stem.alliance@gmail.com",
         link: "https://mail.google.com/mail/u/0/#inbox?compose=CllgCJNstjWSrWQJlnSxFrxVQRRnBPsMvNXpDVGLrQSkfkfRBGhChhWdhJwWxDCkcXGdvKgVTrg"
     },
     {
-        diisplayName: "Instagram",
+        icon: faInstagram,
+        displayName: "Instagram",
         link: "https://www.instagram.com/scarborough.stem.alliance/"
     },
     {
-        diisplayName: "Youtube",
+        icon: faYoutube,
+        displayName: "Youtube",
         link: "https://www.youtube.com/@ScarboroughSTEMAlliance"
     },
 ]

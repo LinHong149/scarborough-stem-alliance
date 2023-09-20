@@ -1,7 +1,7 @@
 import { faEnvelope, faY } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
-import Bethune from './assets/workshops/Bethune.JPG'
+// import Bethune from './assets/workshops/Bethune.JPG'
 import DavidLewis from './assets/workshops/DavidLewis.JPG'
 import FM1 from './assets/workshops/FM1.JPG'
 import FM2 from './assets/workshops/FM2.JPG'
@@ -144,11 +144,11 @@ export const FAQContent = [
 ]
 
 export const eventInfo = [
-    {
-        image: Bethune,
-        title: "Dr. Norman Bethune Collegiate Institute",
-        date: 'March 1st, 2023'
-    },
+    // {
+    //     image: Bethune,
+    //     title: "Dr. Norman Bethune Collegiate Institute",
+    //     date: 'March 1st, 2023'
+    // },
     {
         image: DavidLewis,
         title: "David Lewis Public School",

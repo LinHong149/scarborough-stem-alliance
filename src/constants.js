@@ -1,11 +1,19 @@
 import { faEnvelope, faY } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
-import eventBackground1 from './assets/eventBackground1.png';
-import eventBackground2 from './assets/eventBackground2.png';
-import eventBackground3 from './assets/eventBackground3.png';
-import eventBackground4 from './assets/eventBackground4.png';
-import eventBackground5 from './assets/eventBackground5.png';
+import Bethune from './assets/workshops/Bethune.JPG'
+import DavidLewis from './assets/workshops/DavidLewis.JPG'
+import FM1 from './assets/workshops/FM1.JPG'
+import FM2 from './assets/workshops/FM2.JPG'
+import FM3 from './assets/workshops/FM3.JPG'
+import Lamcrc from './assets/workshops/Lamcrc.JPG'
+import Leacock from './assets/workshops/Leacock.JPG'
+import MacMillan from './assets/workshops/MacMillan.JPG'
+import Mcphail from './assets/workshops/Mcphail.JPG'
+import Miliken from './assets/workshops/Miliken.JPG'
+import TerryFox from './assets/workshops/TerryFox.JPG'
+import TPL from './assets/workshops/TPL.JPG'
+
 
 export const workshopsList = [
     {
@@ -41,34 +49,26 @@ export const contactsList = [
 ]
 
 export const teamPeople = [
-    {
-        image: eventBackground1,
-        name: "Jim"
-    },
-    {
-        image: eventBackground2,
-        name: "Wim"
-    },
-    {
-        image: eventBackground3,
-        name: "Jim"
-    },
-    {
-        image: eventBackground2,
-        name: "Wim"
-    },
-    {
-        image: eventBackground3,
-        name: "Jim"
-    },
-    {
-        image: eventBackground2,
-        name: "Wim"
-    },
-    {
-        image: eventBackground3,
-        name: "Jim"
-    },
+    // {
+    //     image: eventBackground3,
+    //     name: "Jim"
+    // },
+    // {
+    //     image: eventBackground2,
+    //     name: "Wim"
+    // },
+    // {
+    //     image: eventBackground3,
+    //     name: "Jim"
+    // },
+    // {
+    //     image: eventBackground2,
+    //     name: "Wim"
+    // },
+    // {
+    //     image: eventBackground3,
+    //     name: "Jim"
+    // },
 ]
 
 export const footer = [
@@ -145,28 +145,63 @@ export const FAQContent = [
 
 export const eventInfo = [
     {
-        image: eventBackground1,
-        title: "Event Title1",
+        image: Bethune,
+        title: "Dr. Norman Bethune Collegiate Institute",
         date: 'March 1st, 2023'
     },
     {
-        image: eventBackground2,
-        title: "Event Title2",
+        image: DavidLewis,
+        title: "David Lewis Public School",
         date: 'March 1st, 2023'
     },
     {
-        image: eventBackground3,
-        title: "Event Title3",
+        image: FM1,
+        title: "FM1",
         date: 'March 1st, 2023'
     },
     {
-        image: eventBackground4,
-        title: "Event Title4",
+        image: FM2,
+        title: "FM2",
         date: 'March 1st, 2023'
     },
     {
-        image: eventBackground5,
-        title: "Event Title5",
+        image: FM3,
+        title: "FM3",
+        date: 'March 1st, 2023'
+    },
+    {
+        image: Lamcrc,
+        title: "L'Amoreaux Community Recreation Centre",
+        date: 'March 1st, 2023'
+    },
+    {
+        image: Leacock,
+        title: "Stephen Leacock Collegiate Institute",
+        date: 'March 1st, 2023'
+    },
+    {
+        image: MacMillan,
+        title: "Sir Ernest MacMillan Senior Public School",
+        date: 'March 1st, 2023'
+    },
+    {
+        image: Mcphail,
+        title: "Macphail Memorial Elementary School",
+        date: 'March 1st, 2023'
+    },
+    {
+        image: Miliken,
+        title: "Milliken Public School",
+        date: 'March 1st, 2023'
+    },
+    {
+        image: TerryFox,
+        title: "Terry Fox Public School",
+        date: 'March 1st, 2023'
+    },
+    {
+        image: TPL,
+        title: "Toronto Public Library",
         date: 'March 1st, 2023'
     },
 ]

@@ -102,21 +102,12 @@ const Card = ({title, text}) => {
     setIsVisible(inView);
   }, [inView]);
 
-  // console.log("vis", isVisible)
-  
   return (
-    // <CSSTransition
-    //   in={isVisible}
-    //   timeout={5000}
-    //   classNames="card"
-    //   unmountOnExit
-    // >
       <div className={`${isVisible? "card-active": "card-inactive"} min-w-[250px] flex flex-grow shrink bg-black rounded-2xl w-1/4 text-white flex flex-col items-center p-8 transition-all duration-100 delay-2000 ease-in-out gap-4 h-min`}>
         <h3 className='h3'>{title}</h3>
         <p ref={cardRef} className={` transition-all duration-2000 delay-100 ease-in-out text-white text-center grid grid-cols-[minmax(20vh, auto)]`}>{text}</p>
         <a className={`flex transition delay-2000 duration-1000 ease-in text-black rounded-50 p-2 pl-6 pr-6 w-max bg-blue-normal hover:bg-blue-dark flex items-center justify-center `}>Request Workshop</a>
       </div>
-    // </CSSTransition>
   )
 }
 
@@ -136,7 +127,6 @@ const Workshop = ({ theTheme }) => {
           <Card title={info.title} text={info.text}/>
         ))}
       </div>
-      {/* <div className='absolute h-10 w-1 w-full bottom-0 bg-white'></div> */}
     </div>
     
   );

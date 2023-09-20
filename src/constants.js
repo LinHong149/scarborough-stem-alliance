@@ -2,17 +2,17 @@ import { faEnvelope, faY } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 // import Bethune from './assets/workshops/Bethune.JPG'
-import DavidLewis from './assets/workshops/DavidLewis.JPG'
-import FM1 from './assets/workshops/FM1.JPG'
-import FM2 from './assets/workshops/FM2.JPG'
-import FM3 from './assets/workshops/FM3.JPG'
-import Lamcrc from './assets/workshops/Lamcrc.JPG'
-import Leacock from './assets/workshops/Leacock.JPG'
-import MacMillan from './assets/workshops/MacMillan.JPG'
-import Mcphail from './assets/workshops/Mcphail.JPG'
-import Miliken from './assets/workshops/Miliken.JPG'
+import DavidLewis from './assets/workshops/DavidLewis.jpg'
+import FM1 from './assets/workshops/FM1.jpg'
+import FM2 from './assets/workshops/FM2.jpg'
+import FM3 from './assets/workshops/FM3.jpg'
+import Lamcrc from './assets/workshops/Lamcrc.jpg'
+import Leacock from './assets/workshops/Leacock.jpg'
+import MacMillan from './assets/workshops/MacMillan.jpg'
+import Mcphail from './assets/workshops/Mcphail.jpg'
+import Miliken from './assets/workshops/Miliken.jpg'
 import TerryFox from './assets/workshops/TerryFox.jpg'
-import TPL from './assets/workshops/TPL.JPG'
+import TPL from './assets/workshops/TPL.jpg'
 
 
 export const workshopsList = [

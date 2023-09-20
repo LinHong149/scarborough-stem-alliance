@@ -11,7 +11,7 @@ import Leacock from './assets/workshops/Leacock.JPG'
 import MacMillan from './assets/workshops/MacMillan.JPG'
 import Mcphail from './assets/workshops/Mcphail.JPG'
 import Miliken from './assets/workshops/Miliken.JPG'
-import TerryFox from './assets/workshops/TerryFox.JPG'
+import TerryFox from './assets/workshops/TerryFox.jpg'
 import TPL from './assets/workshops/TPL.JPG'
 
 

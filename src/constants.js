@@ -1,7 +1,7 @@
 import { faEnvelope, faY } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
-import Bethune from './assets/Bethune.JPG'
+import Bethune from './assets/Bethune.jpg'
 import DavidLewis from './assets/DavidLewis.jpg'
 import FM1 from './assets/FM1.jpg'
 import FM2 from './assets/FM2.jpg'

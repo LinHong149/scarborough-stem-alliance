@@ -1,18 +1,17 @@
 import { faEnvelope, faY } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
-// import Bethune from './assets/workshops/Bethune.JPG'
-// import DavidLewis from './assets/workshops/DavidLewis.jpg'
-// import FM1 from './assets/workshops/FM1.jpg'
-// import FM2 from './assets/workshops/FM2.jpg'
-// import FM3 from './assets/workshops/FM3.jpg'
-// import Lamcrc from './assets/workshops/Lamcrc.jpg'
-// import Leacock from './assets/workshops/Leacock.jpg'
-// import MacMillan from './assets/workshops/MacMillan.jpg'
-// import Mcphail from './assets/workshops/Mcphail.jpg'
-// import Miliken from './assets/workshops/Miliken.jpg'
-// import TerryFox from './assets/workshops/TerryFox.jpg'
-// import TPL from './assets/workshops/TPL.jpg'
+import Bethune from './assets/Bethune.JPG'
+import DavidLewis from './assets/DavidLewis.jpg'
+import FM1 from './assets/FM1.jpg'
+import FM2 from './assets/FM2.jpg'
+import FM3 from './assets/FM3.jpg'
+import Lamcrc from './assets/Lamcrc.jpg'
+import Leacock from './assets/Leacock.jpg'
+import MacMillan from './assets/MacMillan.jpg'
+import Mcphail from './assets/Mcphail.jpg'
+import Miliken from './assets/Miliken.jpg'
+import TerryFox from './assets/TerryFox.jpg'
 import TPL from './assets/TPL.jpg'
 
 
@@ -145,61 +144,61 @@ export const FAQContent = [
 ]
 
 export const eventInfo = [
-    // {
-    //     image: Bethune,
-    //     title: "Dr. Norman Bethune Collegiate Institute",
-    //     date: 'March 1st, 2023'
-    // },
-    // {
-    //     image: DavidLewis,
-    //     title: "David Lewis Public School",
-    //     date: 'March 1st, 2023'
-    // },
-    // {
-    //     image: FM1,
-    //     title: "FM1",
-    //     date: 'March 1st, 2023'
-    // },
-    // {
-    //     image: FM2,
-    //     title: "FM2",
-    //     date: 'March 1st, 2023'
-    // },
-    // {
-    //     image: FM3,
-    //     title: "FM3",
-    //     date: 'March 1st, 2023'
-    // },
-    // {
-    //     image: Lamcrc,
-    //     title: "L'Amoreaux Community Recreation Centre",
-    //     date: 'March 1st, 2023'
-    // },
-    // {
-    //     image: Leacock,
-    //     title: "Stephen Leacock Collegiate Institute",
-    //     date: 'March 1st, 2023'
-    // },
-    // {
-    //     image: MacMillan,
-    //     title: "Sir Ernest MacMillan Senior Public School",
-    //     date: 'March 1st, 2023'
-    // },
-    // {
-    //     image: Mcphail,
-    //     title: "Macphail Memorial Elementary School",
-    //     date: 'March 1st, 2023'
-    // },
-    // {
-    //     image: Miliken,
-    //     title: "Milliken Public School",
-    //     date: 'March 1st, 2023'
-    // },
-    // {
-    //     image: TerryFox,
-    //     title: "Terry Fox Public School",
-    //     date: 'March 1st, 2023'
-    // },
+    {
+        image: Bethune,
+        title: "Dr. Norman Bethune Collegiate Institute",
+        date: 'March 1st, 2023'
+    },
+    {
+        image: DavidLewis,
+        title: "David Lewis Public School",
+        date: 'March 1st, 2023'
+    },
+    {
+        image: FM1,
+        title: "FM1",
+        date: 'March 1st, 2023'
+    },
+    {
+        image: FM2,
+        title: "FM2",
+        date: 'March 1st, 2023'
+    },
+    {
+        image: FM3,
+        title: "FM3",
+        date: 'March 1st, 2023'
+    },
+    {
+        image: Lamcrc,
+        title: "L'Amoreaux Community Recreation Centre",
+        date: 'March 1st, 2023'
+    },
+    {
+        image: Leacock,
+        title: "Stephen Leacock Collegiate Institute",
+        date: 'March 1st, 2023'
+    },
+    {
+        image: MacMillan,
+        title: "Sir Ernest MacMillan Senior Public School",
+        date: 'March 1st, 2023'
+    },
+    {
+        image: Mcphail,
+        title: "Macphail Memorial Elementary School",
+        date: 'March 1st, 2023'
+    },
+    {
+        image: Miliken,
+        title: "Milliken Public School",
+        date: 'March 1st, 2023'
+    },
+    {
+        image: TerryFox,
+        title: "Terry Fox Public School",
+        date: 'March 1st, 2023'
+    },
     {
         image: TPL,
         title: "Toronto Public Library",

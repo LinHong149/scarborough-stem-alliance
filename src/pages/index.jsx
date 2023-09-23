@@ -111,14 +111,10 @@ export default function Home() {
           <Event/>
         </div>
 
-        <div ref={teamRef} className={`Sponsors flex flex-col items-center w-full gap-50`}>
+        {/* <div ref={teamRef} className={`Sponsors flex flex-col items-center w-full gap-50`}>
           <h1 className={`Sponsors-title h1 text-white text-stroke-white`}>Our Team</h1>
-          {/* <Sponsor></Sponsor> */}
           <Team/>
-          {/* <button className={`Sponsors-button bg-gradient-to-r from-blue-dark to-blue-normal button px-32 py-9 rounded-full shadow-xs bg-white w-fit`}>
-            <p className={`Sponsor-CTA `}>Sponsor Now</p>
-          </button> */}
-        </div>
+        </div> */}
 
 
         {/* <Volunteer theTheme={theme}/> */}

@@ -50,7 +50,7 @@ const Navbar = ({scrollToRefFun, homeRef, aboutRef, workshopsRef, eventsRef, tea
           <p className={`${NavItemStyle} ${NavItemTextStyleMobile}`}>About Us</p>
           <p className={`${NavItemStyle} ${NavItemTextStyleMobile}`}>Workshops</p>
           <p className={`${NavItemStyle} ${NavItemTextStyleMobile}`}>Events</p>
-          <p className={`${NavItemStyle} ${NavItemTextStyleMobile}`}>Team</p>
+          {/* <p className={`${NavItemStyle} ${NavItemTextStyleMobile}`}>Team</p> */}
           <p className={`${NavItemStyle} ${NavItemTextStyleMobile}`}>FAQ</p>
           <p className={`${NavItemStyle} ${NavItemTextStyleMobile}`}>Contact</p>
         </div>:
@@ -59,7 +59,7 @@ const Navbar = ({scrollToRefFun, homeRef, aboutRef, workshopsRef, eventsRef, tea
           <p onClick={() => scrollToRefFun(aboutRef)} className={`${NavItemStyle} ${NavItemTextStyleMobile}`}>About Us</p>
           <p onClick={() => scrollToRefFun(workshopsRef)} className={`${NavItemStyle} ${NavItemTextStyleMobile}`}>Workshops</p>
           <p onClick={() => scrollToRefFun(eventsRef)} className={`${NavItemStyle} ${NavItemTextStyleMobile}`}>Events</p>
-          <p onClick={() => scrollToRefFun(teamRef)}  className={`${NavItemStyle} ${NavItemTextStyleMobile}`}>Team</p>
+          {/* <p onClick={() => scrollToRefFun(teamRef)}  className={`${NavItemStyle} ${NavItemTextStyleMobile}`}>Team</p> */}
           <p onClick={() => scrollToRefFun(faqRef)}  className={`${NavItemStyle} ${NavItemTextStyleMobile}`}>FAQ</p>
           <p onClick={() => scrollToRefFun(contactRef)}  className={`${NavItemStyle} ${NavItemTextStyleMobile}`}>Contact</p>
         </div>}
@@ -80,7 +80,7 @@ const Navbar = ({scrollToRefFun, homeRef, aboutRef, workshopsRef, eventsRef, tea
           <p onClick={() => scrollToRefFun(aboutRef)} className={`${NavItemStyle} ${NavItemTextStyle}`}>About Us</p>
           <p onClick={() => scrollToRefFun(workshopsRef)} className={`${NavItemStyle} ${NavItemTextStyle}`}>Workshops</p>
           <p onClick={() => scrollToRefFun(eventsRef)} className={`${NavItemStyle} ${NavItemTextStyle}`}>Events</p>
-          <p onClick={() => scrollToRefFun(teamRef)} className={`${NavItemStyle} ${NavItemTextStyle}`}>Team</p>
+          {/* <p onClick={() => scrollToRefFun(teamRef)} className={`${NavItemStyle} ${NavItemTextStyle}`}>Team</p> */}
           <p onClick={() => scrollToRefFun(faqRef)} className={`${NavItemStyle} ${NavItemTextStyle}`}>FAQ</p>
           <p onClick={() => scrollToRefFun(contactRef)} className={`${NavItemStyle} ${NavItemTextStyle}`}>Contact</p>
         </div>

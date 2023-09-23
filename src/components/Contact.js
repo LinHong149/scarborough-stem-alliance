@@ -19,7 +19,7 @@ const Contact = ({ inView, theTheme }) => {
             <iframe className="rounded-[20px] aspect-[3/2] w-full flex grow " id="gmap_canvas" src="https://maps.google.com/maps?q=200%20Fundy%20Bay%20Blvd,%20Scarborough,%20ON%20M1W%203G1&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
             <div className='flex items-center gap-10'>
               {contactsList.map((info) => (
-                <a className='hover:text-blue-darkest text-4xl' src={info.link}><FontAwesomeIcon icon={info.icon}/></a>
+                <a className='hover:text-blue-darkest text-4xl' href={info.link}><FontAwesomeIcon icon={info.icon}/></a>
               ))}
             </div>
         </div>

@@ -1,5 +1,5 @@
 import { faEnvelope, faY } from '@fortawesome/free-solid-svg-icons';
-import { faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faYoutube, faDiscord } from '@fortawesome/free-brands-svg-icons';
 
 import Bethune from './assets/Bethune.jpg'
 import DavidLewis from './assets/DavidLewis.jpg'
@@ -15,18 +15,19 @@ import TerryFox from './assets/TerryFox.jpg'
 import TPL from './assets/TPL.jpg'
 
 
+
 export const workshopsList = [
     {
         title: "P5.js",
-        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries."
+        text: "Dive into the world of creative coding and interactive art with our P5.js Workshop! P5.js is a versatile JavaScript library that empowers art and design through programming interactive projects. In this workshop, students will explore the endless possibilities of P5.js. By the end of this workshop, participants will have the skills to create their own interactive art pieces, animations, and creative coding projects using P5.js. "
     },
     {
         title: "EV3",
-        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries."
+        text: "The EV3 workshops introduce the world of robotics and are designed for enthusiasts of all ages using the LEGO MINDSTORMS EV3 kit. During this interactive workshop, students explore engineering, coding, and problem-solving. Participants work with the versatile LEGO EV3 robotics platform to build and program robots. No prior experience is needed, as skilled mentors and volunteers guide through every step."
     },
     {
         title: "Python",
-        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries."
+        text: "Our Python workshops act as an introduction to the thrilling and exciting world of programming! Python, known for its simplicity, versatility, and efficiency, is a popular and common choice among both novice beginners and seasoned experienced developers. During this hands-on workshop, you'll learn the fundamentals of Python and gain skills needed to write your own code and develop applications. No prior expereince needed"
     },
 ]
 
@@ -45,6 +46,11 @@ export const contactsList = [
         icon: faYoutube,
         displayName: "Youtube",
         link: "https://www.youtube.com/@ScarboroughSTEMAlliance"
+    },
+    {
+        icon: faDiscord,
+        displayName: "Discord",
+        link: "https://discord.gg/EU6V2JghGC"
     },
 ]
 
@@ -92,16 +98,16 @@ export const footer = [
 
 export const stats = [
     {
-        number: 20,
-        description: 'youth inspired'
+        number: 3000,
+        description: 'youths, parents & educators engaged'
     },
     {
-        number: 50,
-        description: 'youth inspired'
+        number: 28,
+        description: 'workshops hosted'
     },
     {
-        number: 65,
-        description: 'youth inspired'
+        number: 5,
+        description: 'FIRST teams founded'
     },
 ]
 
@@ -147,61 +153,51 @@ export const eventInfo = [
     {
         image: Bethune,
         title: "Dr. Norman Bethune Collegiate Institute",
-        date: 'March 1st, 2023'
+        date: '2023'
     },
     {
         image: DavidLewis,
         title: "David Lewis Public School",
-        date: 'March 1st, 2023'
-    },
-    {
-        image: FM1,
-        title: "FM1",
-        date: 'March 1st, 2023'
-    },
-    {
-        image: FM2,
-        title: "FM2",
-        date: 'March 1st, 2023'
+        date: '2023'
     },
     {
         image: FM3,
-        title: "FM3",
-        date: 'March 1st, 2023'
+        title: "Forest Manor Public School",
+        date: '2023'
     },
     {
         image: Lamcrc,
         title: "L'Amoreaux Community Recreation Centre",
-        date: 'March 1st, 2023'
+        date: '2023'
     },
     {
         image: Leacock,
         title: "Stephen Leacock Collegiate Institute",
-        date: 'March 1st, 2023'
+        date: '2023'
     },
     {
         image: MacMillan,
         title: "Sir Ernest MacMillan Senior Public School",
-        date: 'March 1st, 2023'
+        date: '2023'
     },
     {
         image: Mcphail,
         title: "Macphail Memorial Elementary School",
-        date: 'March 1st, 2023'
+        date: '2023'
     },
     {
         image: Miliken,
         title: "Milliken Public School",
-        date: 'March 1st, 2023'
+        date: '2023'
     },
     {
         image: TerryFox,
         title: "Terry Fox Public School",
-        date: 'March 1st, 2023'
+        date: '2023'
     },
     {
         image: TPL,
         title: "Toronto Public Library",
-        date: 'March 1st, 2023'
+        date: '2023'
     },
 ]

@@ -103,10 +103,12 @@ const Card = ({title, text}) => {
   }, [inView]);
 
   return (
-      <div className={`${isVisible? "card-active": "card-inactive"} min-w-[250px] flex flex-grow shrink bg-black rounded-2xl w-1/4 text-white flex flex-col items-center p-8 transition-all duration-100 delay-2000 ease-in-out gap-4 h-min`}>
-        <h3 className='h3'>{title}</h3>
-        <p ref={cardRef} className={` transition-all duration-2000 delay-100 ease-in-out text-white text-center grid grid-cols-[minmax(20vh, auto)]`}>{text}</p>
-        <a className={`flex transition delay-2000 duration-1000 ease-in text-black rounded-50 p-2 pl-6 pr-6 w-max bg-blue-normal hover:bg-blue-dark flex items-center justify-center `}>Request Workshop</a>
+      <div className={`${isVisible? "card-active": "card-inactive"} min-w-[300px] h-full flex flex-grow bg-black rounded-2xl w-1/4 text-white flex flex-col items-center p-8 transition-all duration-100 delay-2000 ease-in-out gap-4 justify-between`}>
+        <div className='flex flex-col gap-4 items-center'>
+          <h3 className='h3'>{title}</h3>
+          <p ref={cardRef} className={` transition-all duration-2000 delay-100 ease-in-out text-white text-center grid grid-cols-[minmax(20vh, auto)]`}>{text}</p>
+        </div>
+        <a className={`flex transition duration-250 ease-in text-black rounded-50 p-2 pl-6 pr-6 w-max bg-blue-normal hover:bg-blue-dark flex items-center justify-center `}>Request Workshop</a>
       </div>
   )
 }
@@ -121,8 +123,11 @@ const Workshop = ({ theTheme }) => {
 
   return (
     <div className={`Workshop relative px-[5%] w-full flex z-10 pt-12 pb-12 flex flex-col items-center justify-center gap-50 ${gradient} rounded-50`}>
-      <h1 className={`Workshop-title z-10 h1 text-black transition-bg duration-500`}>Request a Workshop</h1>
-      <div className='flex flex-wrap gap-10 box-border items-center justify-center'>
+      <div className='flex flex-col gap-4 items-center'>
+        <h1 className={`Workshop-title z-10 h1 text-black transition-bg duration-500`}>Request a Workshop</h1>
+        <p className='text-xl text-center'>Are you a school or community? Take a look at our different workshops!</p>
+      </div>
+      <div className='flex flex-wrap gap-10 box-border items-start justify-center '>
         {workshopsList.map((info) => (
           <Card title={info.title} text={info.text}/>
         ))}
